@@ -1,0 +1,181 @@
+Started on 2012-09-21 09:31:13 - 2012 Sep 21
+
+Checking File ....
+File : /home/wwwroot/files/conversion_queue/13481910581231e.flv
+File Exists : Yes
+raw_output : ffmpeg version 0.8.3-4:0.8.3-0ubuntu0.12.04.1, Copyright (c) 2000-2012 the Libav developers
+  built on Jun 12 2012 16:37:58 with gcc 4.6.3
+*** THIS PROGRAM IS DEPRECATED ***
+This program is only provided for compatibility and will be removed in a future release. Please use avconv instead.
+[flv @ 0x8d12240] Estimating duration from bitrate, this may be inaccurate
+Input #0, flv, from '/home/wwwroot/files/conversion_queue/13481910581231e.flv':
+  Metadata:
+    metadatacreator : modified by youku.com in 20111202
+    hasKeyframes    : true
+    hasVideo        : true
+    hasAudio        : true
+    hasMetadata     : true
+  Duration: 00:06:01.53, start: 0.000000, bitrate: N/A
+    Stream #0.0: Video: h264 (High), yuv420p, 448x336 [PAR 1:1 DAR 4:3], 15 tbr, 1k tbn, 30 tbc
+    Stream #0.1: Audio: aac, 44100 Hz, stereo, s16
+Output #0, null, to '/dev/null':
+  Metadata:
+    metadatacreator : modified by youku.com in 20111202
+    hasKeyframes    : true
+    hasVideo        : true
+    hasAudio        : true
+    hasMetadata     : true
+    encoder         : Lavf53.21.0
+    Stream #0.0: Video: libx264, yuv420p, 448x336 [PAR 1:1 DAR 4:3], q=2-31, 90k tbn, 15 tbc
+    Stream #0.1: Audio: libvo_aacenc, 44100 Hz, stereo
+Stream mapping:
+  Stream #0.0 -> #0.0
+  Stream #0.1 -> #0.1
+Press ctrl-c to stop encoding
+frame= 5423 fps=  0 q=-1.0 Lsize=      -0kB time=361.53 bitrate=  -0.0kbits/s    
+video:12086kB audio:1416kB global headers:0kB muxing overhead -100.000159%
+
+
+Preparing file...
+format : flv
+duration : 361.53
+size : 14068902
+bitrate : 304
+video_width : 448
+video_height : 336
+video_wh_ratio : 1.33333333333
+video_codec : h264
+video_rate : 15.0001383011
+video_bitrate : 267
+video_color : N/A
+audio_codec : aac
+audio_bitrate : 31
+audio_rate : 44100
+audio_channels : stereo
+path : /home/wwwroot/files/conversion_queue/13481910581231e.flv
+
+Converting Video
+Conversion Command : /usr/bin/ffmpeg -i /home/wwwroot/files/conversion_queue/13481910581231e.flv  -f flv  -vcodec libx264 -r 25  -ab 128000  -ar 22050  /home/wwwroot/files/videos/13481910581231e.flv  2> /home/wwwroot/files/temp/134819107594e2e.tmp
+
+
+Conversion Details
+
+Flv Quick Conv;raw_output : ffmpeg version 0.8.3-4:0.8.3-0ubuntu0.12.04.1, Copyright (c) 2000-2012 the Libav developers
+  built on Jun 12 2012 16:37:58 with gcc 4.6.3
+*** THIS PROGRAM IS DEPRECATED ***
+This program is only provided for compatibility and will be removed in a future release. Please use avconv instead.
+[flv @ 0x9547240] Estimating duration from bitrate, this may be inaccurate
+Input #0, flv, from '/home/wwwroot/files/videos/13481910581231e.flv':
+  Metadata:
+    lastkeyframetimestamp: 356
+    hasKeyframes    : true
+    metadatacreator : inlet media FLVTool2 v1.0.6 - http://www.inlet-media.de/flvtool2
+    hasAudio        : true
+    lasttimestamp   : 361
+    hasMetadata     : true
+    audiodelay      : 0
+    audiosize       : 1551401
+    hasVideo        : true
+    datasize        : 14016468
+    videosize       : 12462685
+    hasCuePoints    : false
+    canSeekToEnd    : false
+  Duration: 00:06:01.53, start: 0.000000, bitrate: 314 kb/s
+    Stream #0.0: Video: h264 (High), yuv420p, 448x336 [PAR 1:1 DAR 4:3], 281 kb/s, 15 tbr, 1k tbn, 30 tbc
+    Stream #0.1: Audio: aac, 44100 Hz, stereo, s16, 33 kb/s
+Output #0, null, to '/dev/null':
+  Metadata:
+    lastkeyframetimestamp: 356
+    hasKeyframes    : true
+    metadatacreator : inlet media FLVTool2 v1.0.6 - http://www.inlet-media.de/flvtool2
+    hasAudio        : true
+    lasttimestamp   : 361
+    hasMetadata     : true
+    audiodelay      : 0
+    audiosize       : 1551401
+    hasVideo        : true
+    datasize        : 14016468
+    videosize       : 12462685
+    hasCuePoints    : false
+    canSeekToEnd    : false
+    encoder         : Lavf53.21.0
+    Stream #0.0: Video: libx264, yuv420p, 448x336 [PAR 1:1 DAR 4:3], q=2-31, 281 kb/s, 90k tbn, 15 tbc
+    Stream #0.1: Audio: libvo_aacenc, 44100 Hz, stereo, 33 kb/s
+Stream mapping:
+  Stream #0.0 -> #0.0
+  Stream #0.1 -> #0.1
+Press ctrl-c to stop encoding
+frame= 5423 fps=  0 q=-1.0 Lsize=      -0kB time=361.53 bitrate=  -0.0kbits/s    
+video:12086kB audio:1416kB global headers:0kB muxing overhead -100.000159%
+
+raw_output : ffmpeg version 0.8.3-4:0.8.3-0ubuntu0.12.04.1, Copyright (c) 2000-2012 the Libav developers
+  built on Jun 12 2012 16:37:58 with gcc 4.6.3
+*** THIS PROGRAM IS DEPRECATED ***
+This program is only provided for compatibility and will be removed in a future release. Please use avconv instead.
+[flv @ 0x8c86240] Estimating duration from bitrate, this may be inaccurate
+Input #0, flv, from '/home/wwwroot/files/videos/13481910581231e.flv':
+  Metadata:
+    lastkeyframetimestamp: 356
+    hasKeyframes    : true
+    metadatacreator : inlet media FLVTool2 v1.0.6 - http://www.inlet-media.de/flvtool2
+    hasAudio        : true
+    lasttimestamp   : 361
+    hasMetadata     : true
+    audiodelay      : 0
+    audiosize       : 1551401
+    hasVideo        : true
+    datasize        : 14016468
+    videosize       : 12462685
+    hasCuePoints    : false
+    canSeekToEnd    : false
+  Duration: 00:06:01.53, start: 0.000000, bitrate: 314 kb/s
+    Stream #0.0: Video: h264 (High), yuv420p, 448x336 [PAR 1:1 DAR 4:3], 281 kb/s, 15 tbr, 1k tbn, 30 tbc
+    Stream #0.1: Audio: aac, 44100 Hz, stereo, s16, 33 kb/s
+Output #0, null, to '/dev/null':
+  Metadata:
+    lastkeyframetimestamp: 356
+    hasKeyframes    : true
+    metadatacreator : inlet media FLVTool2 v1.0.6 - http://www.inlet-media.de/flvtool2
+    hasAudio        : true
+    lasttimestamp   : 361
+    hasMetadata     : true
+    audiodelay      : 0
+    audiosize       : 1551401
+    hasVideo        : true
+    datasize        : 14016468
+    videosize       : 12462685
+    hasCuePoints    : false
+    canSeekToEnd    : false
+    encoder         : Lavf53.21.0
+    Stream #0.0: Video: libx264, yuv420p, 448x336 [PAR 1:1 DAR 4:3], q=2-31, 281 kb/s, 90k tbn, 15 tbc
+    Stream #0.1: Audio: libvo_aacenc, 44100 Hz, stereo, 33 kb/s
+Stream mapping:
+  Stream #0.0 -> #0.0
+  Stream #0.1 -> #0.1
+Press ctrl-c to stop encoding
+frame= 5423 fps=  0 q=-1.0 Lsize=      -0kB time=361.53 bitrate=  -0.0kbits/s    
+video:12086kB audio:1416kB global headers:0kB muxing overhead -100.000159%
+
+
+
+output_format : flv
+output_duration : 361.53
+output_size : 14069329
+output_bitrate : 304
+output_video_width : 448
+output_video_height : 336
+output_video_wh_ratio : 1.33333333333
+output_video_codec : h264
+output_video_rate : 15.0001383011
+output_video_bitrate : 267
+output_video_color : N/A
+output_audio_codec : aac
+output_audio_bitrate : 31
+output_audio_rate : 44100
+output_audio_channels : stereo
+output_path : /home/wwwroot/files/videos/13481910581231e.flv
+
+
+Time Took : 5.0452 seconds
+
+conversion_status : completed

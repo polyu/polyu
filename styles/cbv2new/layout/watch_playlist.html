@@ -1,0 +1,77 @@
+<div class="vid_top_container">
+    <div class="video_title">{$playlist.playlist_name}</div>
+</div>
+<div class="player_container" id="normal_player_cont">
+    {FlashPlayer playlist_detail=$playlist_detail}
+</div>
+<div class="video_details clearfix">
+	<div class="vd_details" style="width:100%;">
+	    <div class="uploading_detail">
+	    {assign var="owner" value=$cbvid->action->get_owner_by_playlistid($playlist.playlist_id)}
+	    	<a href="#	">Created by {$owner} &#8212; {$playlist.date_added|nicetime}</a>
+	        <a href="#" style="float:right;" onclick="OpenTempAdjustDialog()">Adjust the playlist</a>
+	    </div>
+	    <div class="vd_stats">
+	        <ul>
+	          <li>{lang code='videos'} : <strong>{$count|number_format}</strong></li>
+	        </ul>
+	    <div class="clearfix"></div>    
+	    </div>
+	</div>
+	<div class="desc_cont">
+    	<div class="less_desc" id="less_desc">
+        	 <span class="upper_quote"></span>{$playlist.playlist_describe|description|truncate:200}{if strlen($playlist_playlist_describe)>200}<a href="javascript:void(0)" onclick="$('#less_desc').css('display','none');$('#more_desc').css('display','block');">{lang code='more'}</a>{/if}
+        </div> 
+        <div class="more_desc" id="more_desc" style="display:none">
+        	 <span class="upper_quote"></span>{$playlist.playlist_describe|description} <a href="javascript:void(0)" onclick="$('#more_desc').css('display','none');$('#less_desc').css('display','block');">Less</a>
+        </div>
+    </div>
+</div>
+<script>
+
+{literal}
+//script for adjustlist
+
+
+function OpenTempAdjustDialog()
+{
+	var playlist_var=playlist_detail;
+	var newplaylist_var=[];
+	$("#sortable").empty();
+	for(i=0;i<playlist_var.length;i++)
+	{
+		
+		$("#sortable").append('<li id="' +i+ '"class="ui-state-default" style="margin-bottom:10px;"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>'+playlist_var[i]['title']+'</li>')
+	}
+	$( "#sortable" ).sortable();
+	$( "#sortable" ).disableSelection();
+	$( "#adjustlist" ).dialog({
+	height: 500,
+	width:500,
+	modal: true,
+	buttons: {
+				"OK": function() {
+					$( this ).dialog( "close" );
+					result=$( "#sortable" ).sortable("toArray");
+					for(i=0;i<playlist_var.length;i++)
+					{
+						newplaylist_var[i]=playlist_var[result[i]];
+					}
+				
+					playlist_detail=newplaylist_var;
+					jwplayer("mediaplayer").load(playlist_detail);
+					
+				},
+				Cancel: function() {
+					$( this ).dialog( "close" );
+				}
+		}
+	});
+}
+{/literal}
+</script>
+<div id="adjustlist" title="Adjust Playlist" style="display:none;">
+	<ul id="sortable">
+    </ul>
+    
+</div>

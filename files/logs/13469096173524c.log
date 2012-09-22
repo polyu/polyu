@@ -1,0 +1,31 @@
+Started on 2012-09-07 15:26:19 - 2012 Sep 07
+
+Checking File ....
+File : /home/wwwroot/files/conversion_queue/13469096173524c.flv
+File Exists : No
+Failed to stat file /home/wwwroot/files/temp//home/wwwroot/files/conversion_queue/13469096173524c.flv!
+
+Preparing file...
+ Unknown file details - Unable to get video details using FFMPEG 
+
+Converting Video
+Conversion Command : /usr/bin/ffmpeg -i /home/wwwroot/files/temp//home/wwwroot/files/conversion_queue/13469096173524c.flv  -f flv  -vcodec libx264 -vpre normal  -r 25  -s 0x0 -aspect 0 -padcolor 000000 -padtop 0 -padbottom 0 -padleft 0 -padright 0  -acodec libfaac -ab 128000  -an  /home/wwwroot/files/videos/13469096173524c.flv  2> /home/wwwroot/files/temp/13470027795f042.tmp
+
+
+Conversion Details
+
+ffmpeg version 0.8.3-4:0.8.3-0ubuntu0.12.04.1, Copyright (c) 2000-2012 the Libav developers
+  built on Jun 12 2012 16:37:58 with gcc 4.6.3
+*** THIS PROGRAM IS DEPRECATED ***
+This program is only provided for compatibility and will be removed in a future release. Please use avconv instead.
+/home/wwwroot/files/temp//home/wwwroot/files/conversion_queue/13469096173524c.flv: No such file or directory
+Failed to stat file /home/wwwroot/files/videos/13469096173524c.flv!
+Failed to stat file /home/wwwroot/files/videos/13469096173524c.flv!
+
+
+ Unknown file details - Unable to get output video details using FFMPEG 
+
+
+Time Took : 0.2686 seconds
+
+conversion_status : failed

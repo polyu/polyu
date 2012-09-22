@@ -1,0 +1,33 @@
+{if $cur_class==''}
+{assign var=cur_class value=$smarty.cookies.current_style}
+{/if}
+{if $display_type =='normal' || $display_type==''}
+<!-- Video Box-->
+<div id="vid_wrap_{$video.videoid}" class="{if $video_view}{$video_view}{else}grid_view {if $cur_class == 'grid_view'}{else}{$cur_class}{/if}{/if}">
+	<div class="vid_thumb" >
+    	<a href="watch_playlist.php?playlist={$playlist_id}"><img src="{getThumb vdetails=$video}" title="{$video.title}" alt="{$video.title}" {ANCHOR place="video_thumb" data=$video} /></a>
+       
+        {if $video.broadcast=='private'}
+        	<a href="{videoLink vdetails=$video}"><span class="private_video">&nbsp;</span></a>
+        {/if}
+        {ANCHOR place='in_video_thumb' data=$video}    
+    </div> <!--VID_THUMB END-->
+    <div class="vid_info_wrap">
+        <h2 class="title truncatedtitle"><a href="watch_playlist.php?playlist={$playlist_id}" title="{$playlist.playlist_name}">{$playlist.playlist_name|truncate:40}</a></h2>
+        <h2 class="title fulltitle" style="display:none"><a href="watch_playlist.php?playlist={$playlist_id}">{$playlist.playlist_name}</a></h2>
+        <div class="list_rating" style="display:none;">
+        	{show_rating class='rating' rating=$video.rating ratings=$video.rated_by total='10' }
+		</div>            
+        <p id="desc" class="vid_info">{$playlist.playlist_describe}</p>
+        <p class="vid_info">{$video.views} View(<strong>s</strong>) </p>
+         <p class="vid_info">{$playlist_count} Video(<strong>s</strong>)</p>
+         {assign var='owner' value=$cbvid->action->get_owner_by_playlistid($playlist_id)}
+        <p class="vid_info"><span class="info_list">Modified By </span><a href="#">{$owner}</a> <span class="list_up_time">({$video.date_added|niceTime})</span></p>
+    </div> <!--VID_INFO_WRAP END-->
+</div> <!--VID_WRAP END-->
+
+{if $only_once}
+    <div class="clearfix"></div>
+{/if}
+<!-- Video Box -->
+{/if}
