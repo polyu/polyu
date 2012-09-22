@@ -154,10 +154,7 @@ if($_POST['youtube'])
 	'title'=>$vid_array['title'],'desc'=>$vid_array['description'],
 	'tags'=>$vid_array['tags'])));	
 }
-if($_POST['LiveCam'])
-{
-	
-}
+
 
  
  

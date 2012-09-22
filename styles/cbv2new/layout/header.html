@@ -64,6 +64,7 @@
         				
         <li><a href="{link name='index '}">{lang code='menu_home'}</a></li>
          <li><a href="{link name='videos'}">{lang code='videos'}</a></li>
+          <li><a href="search_result.php">{lang code='search'}</a></li>
          {if $userquery->perm_check('allow_video_upload',true)}
         	<li><a href="{link name='my_account'}">{lang code='com_my_account'}</a></li>          	
         	
@@ -73,19 +74,20 @@
 <li><a href="{link name='upload'}">Upload video</a></li>
 						{/if}
 						{if has_access('admin_access',true)}
+							<li><a href="manage_cameras.php">Camera</a></li>
 							<li><a href="admin_area">Admin</a></li>
 						{/if}
         	<li><a href="{link name='logout'}">{lang code='logout'}</a></li>
           
          </ul>
-<div class="search_con">
+<div class="search_con" style="display:none;">
     <div class="s_bg">	
         <form action="{link name='search_result'}" method="get" name="search" id="search" style="margin:0px; padding:0px;">               
             <input name="query" id="query" type="text" class="searchbar" value="{'query'|get_form_val:true}" />
             <input type="hidden" name="type" id="searchType" value="{$smarty.get.type}" />                      
             <div class="moveL">
             	<div id="selectedSearch" class="clearfix" onclick="$('#searchSelectWrapper').toggle();">
-                	<span id="selectedText">{$smarty.get.type|capitalize}</span>
+                	<span id="selectedText"">{$smarty.get.type|capitalize}</span>
                 </div>
                 <div id="searchSelectWrapper">
                 <ul>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-12 10:43:23
+<?php /* Smarty version 2.6.18, created on 2012-09-22 08:44:11
          compiled from /home/wwwroot/styles/cbv2new/layout/header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'cbtitle', '/home/wwwroot/styles/cbv2new/layout/header.html', 8, false),array('function', 'ANCHOR', '/home/wwwroot/styles/cbv2new/layout/header.html', 10, false),array('function', 'link', '/home/wwwroot/styles/cbv2new/layout/header.html', 15, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/header.html', 19, false),array('function', 'cbMenu', '/home/wwwroot/styles/cbv2new/layout/header.html', 52, false),array('modifier', 'sprintf', '/home/wwwroot/styles/cbv2new/layout/header.html', 28, false),array('modifier', 'get_form_val', '/home/wwwroot/styles/cbv2new/layout/header.html', 84, false),array('modifier', 'capitalize', '/home/wwwroot/styles/cbv2new/layout/header.html', 88, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'cbtitle', '/home/wwwroot/styles/cbv2new/layout/header.html', 8, false),array('function', 'ANCHOR', '/home/wwwroot/styles/cbv2new/layout/header.html', 10, false),array('function', 'link', '/home/wwwroot/styles/cbv2new/layout/header.html', 15, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/header.html', 19, false),array('function', 'cbMenu', '/home/wwwroot/styles/cbv2new/layout/header.html', 52, false),array('modifier', 'sprintf', '/home/wwwroot/styles/cbv2new/layout/header.html', 28, false),array('modifier', 'get_form_val', '/home/wwwroot/styles/cbv2new/layout/header.html', 86, false),array('modifier', 'capitalize', '/home/wwwroot/styles/cbv2new/layout/header.html', 90, false),)), $this); ?>
 <div class="topHead">
 <div id="container" class="container clearfix">
 <!-- Loading Quicklist Box -->
@@ -102,6 +102,8 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'cbtitle', '
          <li><a href="<?php echo cblink(array('name' => 'videos'), $this);?>
 "><?php echo smarty_lang(array('code' => 'videos'), $this);?>
 </a></li>
+          <li><a href="search_result.php"><?php echo smarty_lang(array('code' => 'search'), $this);?>
+</a></li>
          <?php if ($this->_tpl_vars['userquery']->perm_check('allow_video_upload',true)): ?>
         	<li><a href="<?php echo cblink(array('name' => 'my_account'), $this);?>
 "><?php echo smarty_lang(array('code' => 'com_my_account'), $this);?>
@@ -118,6 +120,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'cbtitle', '
 ">Upload video</a></li>
 						<?php endif; ?>
 						<?php if (has_access ( 'admin_access' , true )): ?>
+							<li><a href="manage_cameras.php">Camera</a></li>
 							<li><a href="admin_area">Admin</a></li>
 						<?php endif; ?>
         	<li><a href="<?php echo cblink(array('name' => 'logout'), $this);?>
@@ -125,7 +128,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'cbtitle', '
 </a></li>
           
          </ul>
-<div class="search_con">
+<div class="search_con" style="display:none;">
     <div class="s_bg">	
         <form action="<?php echo cblink(array('name' => 'search_result'), $this);?>
 " method="get" name="search" id="search" style="margin:0px; padding:0px;">               
@@ -135,7 +138,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'cbtitle', '
 " />                      
             <div class="moveL">
             	<div id="selectedSearch" class="clearfix" onclick="$('#searchSelectWrapper').toggle();">
-                	<span id="selectedText"><?php echo ((is_array($_tmp=$_GET['type'])) ? $this->_run_mod_handler('capitalize', true, $_tmp) : smarty_modifier_capitalize($_tmp)); ?>
+                	<span id="selectedText""><?php echo ((is_array($_tmp=$_GET['type'])) ? $this->_run_mod_handler('capitalize', true, $_tmp) : smarty_modifier_capitalize($_tmp)); ?>
 </span>
                 </div>
                 <div id="searchSelectWrapper">

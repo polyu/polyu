@@ -38,9 +38,8 @@
             '.lang('remoteDownloadStatusDiv').'
         </div>                
         <div align="right">
-			<input type="button" name="livecamUploadBttn" id="livecamUploadBttn" 
-			value="'.lang('add_live_cam').'" onClick="youtube_upload()" class="cbSubmitUpload">
-			<input type="button" name="ytUploadBttn" id="ytUploadBttn" 
+			
+			<input type="button"  name="ytUploadBttn" id="ytUploadBttn" 
 			value="'.lang('grab_from_youtube').'" onClick="youtube_upload()" class="cbSubmitUpload">
             <input type="button" name="remoteUploadBttn" id="remoteUploadBttn" value="'.lang('upload').'" 
 			onClick="'.get_remote_url_function().'" class="cbSubmitUpload">

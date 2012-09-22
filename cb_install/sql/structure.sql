@@ -551,6 +551,26 @@ CREATE TABLE IF NOT EXISTS `{tbl_prefix}playlists` (
 
 -- --------------------------------------------------------
 
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `cb_livecam`
+--
+
+CREATE TABLE IF NOT EXISTS `{tbl_prefix}_livecam` (
+  `cam_id` int(11) NOT NULL AUTO_INCREMENT,
+  `cam_name` varchar(255) NOT NULL,
+  `cam_describe` varchar(1024) NOT NULL,
+  `userid` int(11) NOT NULL,
+  `cam_address` varchar(1024) NOT NULL,
+  `date_added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`cam_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+-- --------------------------------------------------------
+
+
 --
 -- Table structure for table `playlist_items`
 --

@@ -200,6 +200,8 @@ function reopen(textObject)
 		
 	}
 	
+	
+	
 	function youtube_upload()
 	{
 		$('#remoteUploadBttn').attr("disabled","disabled");
