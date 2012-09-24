@@ -26,7 +26,9 @@ if($cam_id)
 		}
 		else
 		{
-			
+			assign("camera",$camera);
+			template_files('watch_camera.html');
+			display_it();
 		}
 		
 	}

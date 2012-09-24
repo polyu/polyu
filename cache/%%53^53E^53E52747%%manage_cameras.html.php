@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 03:49:04
+<?php /* Smarty version 2.6.18, created on 2012-09-25 01:49:33
          compiled from /home/wwwroot/styles/cbv2new/layout/manage_cameras.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 7, false),array('modifier', 'truncate', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 59, false),array('modifier', 'date_format', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 63, false),)), $this); ?>
@@ -107,8 +107,10 @@ $this->_sections['plist']['last']       = ($this->_sections['plist']['iteration'
  	    <td valign="middle">
         <?php echo ((is_array($_tmp=$this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_name'])) ? $this->_run_mod_handler('truncate', true, $_tmp, 100) : smarty_modifier_truncate($_tmp, 100)); ?>
 <br />
-		<span class="video_control"><a href="?mode=edit_camera&amp;pid=<?php echo $this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_id']; ?>
+		<span class="video_control"><a href="watch_camera.php?cam_id=<?php echo $this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_id']; ?>
 "><?php echo smarty_lang(array('code' => 'view'), $this);?>
+</a> - <a href="?mode=edit_camera&amp;pid=<?php echo $this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_id']; ?>
+"><?php echo smarty_lang(array('code' => 'edit'), $this);?>
 </a> - <a href="javascript:void(0)"  onmousedown="delete_video('delete_icon_a','<?php echo $this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_id']; ?>
 ','<?php echo smarty_lang(array('code' => 'remove_camera_confirm'), $this);?>
 ','?mode=manage_camera&amp;delete_camera=<?php echo $this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_id']; ?>

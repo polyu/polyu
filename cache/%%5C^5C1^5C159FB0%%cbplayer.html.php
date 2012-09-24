@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 07:16:42
+<?php /* Smarty version 2.6.18, created on 2012-09-25 01:42:59
          compiled from /home/wwwroot/player/cbplayer/cbplayer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'getThumb', '/home/wwwroot/player/cbplayer/cbplayer.html', 10, false),)), $this); ?>
@@ -38,15 +38,7 @@ var playlist_detail=<?php echo $this->_tpl_vars['playlist_detail']; ?>
        'playlist.size': '320',
        repeat: 'list',
 		<?php endif; ?>
-		plugins:
-		{
-			
-			<!-- Loading HQ Plugin -->
-			'hd-2':
-			{
-				'file':normal_video_file,
-			},
-                },
+		
 		image: preview_img,
 		width: '100%',
 		height:'<?php echo $this->_tpl_vars['player_data']['height']; ?>
