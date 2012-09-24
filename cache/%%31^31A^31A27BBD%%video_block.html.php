@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 10:26:24
+<?php /* Smarty version 2.6.18, created on 2012-09-24 16:21:58
          compiled from /home/wwwroot/styles/cbv2new/layout/blocks/quicklist/video_block.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'videoLink', '/home/wwwroot/styles/cbv2new/layout/blocks/quicklist/video_block.html', 3, false),array('function', 'getThumb', '/home/wwwroot/styles/cbv2new/layout/blocks/quicklist/video_block.html', 7, false),array('modifier', 'truncate', '/home/wwwroot/styles/cbv2new/layout/blocks/quicklist/video_block.html', 8, false),array('modifier', 'SetTime', '/home/wwwroot/styles/cbv2new/layout/blocks/quicklist/video_block.html', 13, false),)), $this); ?>

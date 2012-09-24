@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-13 09:46:04
+<?php /* Smarty version 2.6.18, created on 2012-09-24 15:41:16
          compiled from /home/wwwroot/styles/global/head.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'include_js', '/home/wwwroot/styles/global/head.html', 58, false),array('function', 'include_header', '/home/wwwroot/styles/global/head.html', 67, false),array('function', 'lang', '/home/wwwroot/styles/global/head.html', 84, false),array('function', 'getThumb', '/home/wwwroot/styles/global/head.html', 489, false),array('function', 'fb_embed_video', '/home/wwwroot/styles/global/head.html', 493, false),array('function', 'videoLink', '/home/wwwroot/styles/global/head.html', 498, false),array('function', 'get_photo', '/home/wwwroot/styles/global/head.html', 506, false),array('modifier', 'replace', '/home/wwwroot/styles/global/head.html', 88, false),array('modifier', 'description', '/home/wwwroot/styles/global/head.html', 488, false),array('modifier', 'strip_tags', '/home/wwwroot/styles/global/head.html', 488, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'include_js', '/home/wwwroot/styles/global/head.html', 60, false),array('function', 'include_header', '/home/wwwroot/styles/global/head.html', 69, false),array('function', 'lang', '/home/wwwroot/styles/global/head.html', 86, false),array('function', 'getThumb', '/home/wwwroot/styles/global/head.html', 491, false),array('function', 'fb_embed_video', '/home/wwwroot/styles/global/head.html', 495, false),array('function', 'videoLink', '/home/wwwroot/styles/global/head.html', 500, false),array('function', 'get_photo', '/home/wwwroot/styles/global/head.html', 508, false),array('modifier', 'replace', '/home/wwwroot/styles/global/head.html', 90, false),array('modifier', 'description', '/home/wwwroot/styles/global/head.html', 490, false),array('modifier', 'strip_tags', '/home/wwwroot/styles/global/head.html', 490, false),)), $this); ?>
 <script>
 var baseurl = '<?php echo $this->_tpl_vars['baseurl']; ?>
 ';
@@ -10,6 +10,7 @@ var imageurl = '<?php echo $this->_tpl_vars['imageurl']; ?>
 </script>
 <link rel="stylesheet" href="<?php echo $this->_tpl_vars['baseurl']; ?>
 /styles/global/jquery_ui.css" type="text/css" media="all" />
+
 <?php if ($this->_tpl_vars['Cbucket']->configs['use_google_api']): ?>
 <script type="text/javascript" src="https://www.google.com/jsapi?key=ABQIAAAAr5pj809LgbJgBTxDJGy0IxQH8siQo9V3STvJ8WIDHu37hIWsoxRX_d1ABxknSddUPvo4LFb7wq8gwA"></script>
 
@@ -20,8 +21,10 @@ var imageurl = '<?php echo $this->_tpl_vars['imageurl']; ?>
 <?php else: ?>
 <script type="text/javascript" src="<?php echo $this->_tpl_vars['js']; ?>
 /jquery.js"></script>
+
 <script type="text/javascript" src="<?php echo $this->_tpl_vars['js']; ?>
 /ui/jquery-ui.js"></script>
+
 <?php endif; ?> 
 <script type="text/javascript">
 var embedPlayerWidth = '<?php echo $this->_tpl_vars['Cbucket']->configs['embed_player_width']; ?>
@@ -40,7 +43,6 @@ function updateEmbed(width,height,autoplay)
 	$(\'#embed_code\').val( $(\'#embed_code\').val().replace(/height=\\"([0-9]+)\\"/g,\'height="\'+height+\'"\') );
 	$(\'#embed_code\').val( $(\'#embed_code\').val().replace(/height\\:([0-9]+)px/g,\'height:\'+height+\'px\') );
 }
-
 function switchEmbedCode(type)
 {
 	if(embed_type==type)

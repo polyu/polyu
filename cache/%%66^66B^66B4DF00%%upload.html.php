@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 11:01:52
+<?php /* Smarty version 2.6.18, created on 2012-09-24 14:46:20
          compiled from /home/wwwroot/styles/cbv2new/layout/upload.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/upload.html', 1, false),array('function', 'load_form', '/home/wwwroot/styles/cbv2new/layout/upload.html', 28, false),array('function', 'link', '/home/wwwroot/styles/cbv2new/layout/upload.html', 56, false),array('function', 'AD', '/home/wwwroot/styles/cbv2new/layout/upload.html', 70, false),array('modifier', 'sprintf', '/home/wwwroot/styles/cbv2new/layout/upload.html', 58, false),)), $this); ?>

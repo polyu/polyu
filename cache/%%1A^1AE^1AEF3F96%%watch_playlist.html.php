@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-17 14:01:38
+<?php /* Smarty version 2.6.18, created on 2012-09-24 14:03:29
          compiled from /home/wwwroot/styles/cbv2new/layout/watch_playlist.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'FlashPlayer', '/home/wwwroot/styles/cbv2new/layout/watch_playlist.html', 5, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/watch_playlist.html', 16, false),array('modifier', 'nicetime', '/home/wwwroot/styles/cbv2new/layout/watch_playlist.html', 11, false),array('modifier', 'number_format', '/home/wwwroot/styles/cbv2new/layout/watch_playlist.html', 16, false),array('modifier', 'description', '/home/wwwroot/styles/cbv2new/layout/watch_playlist.html', 23, false),array('modifier', 'truncate', '/home/wwwroot/styles/cbv2new/layout/watch_playlist.html', 23, false),)), $this); ?>

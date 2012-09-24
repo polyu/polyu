@@ -920,6 +920,7 @@ class cbactions
 		   			$result=$result."duration:'".$video[0]['duration']."',";
 		   			$result=$result."description:'".$video[0]['description']."',";
 		   			$result=$result."image:'".get_thumb($video[0])."',";
+		   			$result=$result."remoteurl:'".$video[0]['remote_play_url']."',";
 		   			$result=$result."itemid:'".$item['playlist_item_id']."',";
 		   			$result=$result."file:'".get_video_file($video[0])."'";
 		   			$result=$result."}";

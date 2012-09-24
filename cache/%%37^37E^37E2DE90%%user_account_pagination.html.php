@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 10:41:56
+<?php /* Smarty version 2.6.18, created on 2012-09-24 14:10:39
          compiled from /home/wwwroot/styles/cbv2new/layout/blocks/manage/user_account_pagination.html */ ?>
 <div class="account_table">
  	<table width="100%" border="0" cellspacing="0" cellpadding="0">

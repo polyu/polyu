@@ -37,8 +37,10 @@ var playlist_detail={$playlist_detail};
 		'plugins':
 		{ldelim}
 			
-			
-			
+			'player/cbplayer/plugins/plugin.js': {ldelim}
+            text: 'Hello world!'
+          {rdelim}
+		
 			
 		{rdelim}
 		,
@@ -54,10 +56,7 @@ var playlist_detail={$playlist_detail};
 			hide:'false'
 		{rdelim},
 		<!-- Ending Logo Settings-->
-		<!-- Setting context menu -->
-		'abouttext' : '{$Cbucket->configs.pakplayer_contextmsg}',
-		'aboutlink' : baseurl,
-		<!-- Setting context menu ends -->
+		
 		
 		
 		<!-- Events And JS Api -->
@@ -68,8 +67,46 @@ var playlist_detail={$playlist_detail};
 			{rdelim},
 			onPlay:function()
 			{ldelim}
+				var item=jwplayer("mediaplayer").getPlaylistItem();
+				
+					if(item['remoteurl']==''||item['remoteurl']==undefined)
+						{ldelim}
+							
+						{rdelim}
+					else
+						{ldelim}
+						
+						
+						{rdelim}
 				
 			{rdelim}
 		{rdelim}
 	{rdelim});
+</script>
+
+<div id="LiveVideo" style="display:none">
+<iframe id="LiveVideoBox" src="" style="width:800px;height:800px;"></iframe>
+</div>
+<script>
+
+{literal}
+//script for adjustlist
+
+
+function OpenLiveVideo()
+{
+	jwplayer("mediaplayer").pause();
+	var item=jwplayer("mediaplayer").getPlaylistItem();
+	$("#LiveVideoBox").attr("src","watch_camera.php?fullscreen=1&cam_id="+item['remoteurl']);
+	$( "#LiveVideo" ).dialog({
+	height: 700,
+	width:900,
+	buttons: {
+				"OK": function() {
+					$( this ).dialog( "close" );
+				}
+		}
+	});
+}
+{/literal}
 </script>

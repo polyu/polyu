@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-25 01:42:59
+<?php /* Smarty version 2.6.18, created on 2012-09-24 16:40:09
          compiled from /home/wwwroot/player/cbplayer/cbplayer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'getThumb', '/home/wwwroot/player/cbplayer/cbplayer.html', 10, false),)), $this); ?>
@@ -49,17 +49,7 @@ var playlist_detail=<?php echo $this->_tpl_vars['playlist_detail']; ?>
 		<!-- Setting Pseudo Streaming -->
 		<?php if ($this->_tpl_vars['Cbucket']->configs['pseudostreaming'] == 'yes'): ?>provider: 'http',<?php endif; ?>
 		
-		<!-- Setting Plugins -->
-		'plugins':
-		{
-			
-			
-			
-			
-		}
-		,
 		
-		<!-- For Licensensed Players -->
   		<!-- Setting Logo -->
 		'logo':{
 			file :player_logo ,
@@ -72,11 +62,7 @@ var playlist_detail=<?php echo $this->_tpl_vars['playlist_detail']; ?>
 			hide:'false'
 		},
 		<!-- Ending Logo Settings-->
-		<!-- Setting context menu -->
-		'abouttext' : '<?php echo $this->_tpl_vars['Cbucket']->configs['pakplayer_contextmsg']; ?>
-',
-		'aboutlink' : baseurl,
-		<!-- Setting context menu ends -->
+		
 		
 		
 		<!-- Events And JS Api -->
@@ -87,8 +73,51 @@ var playlist_detail=<?php echo $this->_tpl_vars['playlist_detail']; ?>
 			},
 			onPlay:function()
 			{
+				var item=jwplayer("mediaplayer").getPlaylistItem();
+				
+					if(item['remoteurl']==''||item['remoteurl']==undefined)
+						{
+							
+							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld', sayhello, '/player/cbplayer/skins/live.png', '/player/cbplayer/skins/live.png');
+						}
+					else
+						{
+							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld', sayhello, '/player/cbplayer/skins/live.png', '/player/cbplayer/skins/live.png');
+						}
 				
 			}
 		}
 	});
-</script>
+</script>
+
+<div id="LiveVideo" style="display:none">
+<iframe id="LiveVideoBox" src="" style="width:800px;height:800px;"></iframe>
+</div>
+<script>
+
+<?php echo '
+//script for adjustlist
+
+
+function OpenLiveVideo()
+{
+	jwplayer("mediaplayer").pause();
+	var item=jwplayer("mediaplayer").getPlaylistItem();
+	$("#LiveVideoBox").attr("src","watch_camera.php?fullscreen=1&cam_id="+item[\'remoteurl\']);
+	$( "#LiveVideo" ).dialog({
+	height: 600,
+	width:900,
+	buttons: {
+				"OK": function() {
+					$( this ).dialog( "close" );
+				}
+		}
+	});
+}
+function helloworld()
+{
+}
+'; ?>
+
+
+</script>

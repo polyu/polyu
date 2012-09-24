@@ -20,7 +20,7 @@ if($cam_id)
 	$camera=$cbvid->action->get_camera($cam_id);
 	if($camera)
 	{
-		if($_GET['fullscreen'])
+		if($_GET['fullscreen']=='1')
 		{
 			redirect_to($camera['cam_address']);
 		}

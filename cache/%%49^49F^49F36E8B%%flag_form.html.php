@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 10:16:18
+<?php /* Smarty version 2.6.18, created on 2012-09-24 14:39:37
          compiled from /home/wwwroot/styles/cbv2new/layout/blocks/flag_form.html */ ?>
 <!-- Flag This <?php echo $this->_tpl_vars['type']; ?>
  -->

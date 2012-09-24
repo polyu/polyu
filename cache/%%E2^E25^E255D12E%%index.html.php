@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 13:47:21
+<?php /* Smarty version 2.6.18, created on 2012-09-24 14:03:28
          compiled from /home/wwwroot/styles/cbv2new/layout/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/index.html', 8, false),)), $this); ?>

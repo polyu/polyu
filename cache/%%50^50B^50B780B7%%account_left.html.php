@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 10:22:03
+<?php /* Smarty version 2.6.18, created on 2012-09-24 14:10:38
          compiled from /home/wwwroot/styles/cbv2new/layout/blocks/manage/account_left.html */ ?>
 <div class="my_account_left">
 <ul>

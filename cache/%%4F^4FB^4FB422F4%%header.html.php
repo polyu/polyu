@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-22 08:44:11
+<?php /* Smarty version 2.6.18, created on 2012-09-24 14:03:28
          compiled from /home/wwwroot/styles/cbv2new/layout/header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'cbtitle', '/home/wwwroot/styles/cbv2new/layout/header.html', 8, false),array('function', 'ANCHOR', '/home/wwwroot/styles/cbv2new/layout/header.html', 10, false),array('function', 'link', '/home/wwwroot/styles/cbv2new/layout/header.html', 15, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/header.html', 19, false),array('function', 'cbMenu', '/home/wwwroot/styles/cbv2new/layout/header.html', 52, false),array('modifier', 'sprintf', '/home/wwwroot/styles/cbv2new/layout/header.html', 28, false),array('modifier', 'get_form_val', '/home/wwwroot/styles/cbv2new/layout/header.html', 86, false),array('modifier', 'capitalize', '/home/wwwroot/styles/cbv2new/layout/header.html', 90, false),)), $this); ?>

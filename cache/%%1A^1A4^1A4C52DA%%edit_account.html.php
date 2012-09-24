@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 10:54:02
+<?php /* Smarty version 2.6.18, created on 2012-09-24 16:13:24
          compiled from /home/wwwroot/styles/cbv2new/layout/edit_account.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/edit_account.html', 10, false),array('function', 'ANCHOR', '/home/wwwroot/styles/cbv2new/layout/edit_account.html', 47, false),array('modifier', 'number_format', '/home/wwwroot/styles/cbv2new/layout/edit_account.html', 328, false),)), $this); ?>

@@ -24,15 +24,7 @@ var playlist_detail={$playlist_detail};
        'playlist.size': '320',
        repeat: 'list',
 		{/if}
-		plugins:
-		{ldelim}
-			
-			<!-- Loading HQ Plugin -->
-			'hd-2':
-			{ldelim}
-				'file':normal_video_file,
-			{rdelim},
-                {rdelim},
+		
 		image: preview_img,
 		width: '100%',
 		height:'{$player_data.height}',
@@ -45,8 +37,10 @@ var playlist_detail={$playlist_detail};
 		'plugins':
 		{ldelim}
 			
-			
-			
+			'./plugins/plugin.js': {ldelim}
+            text: 'Hello world!'
+          {rdelim}
+		
 			
 		{rdelim}
 		,
@@ -62,10 +56,7 @@ var playlist_detail={$playlist_detail};
 			hide:'false'
 		{rdelim},
 		<!-- Ending Logo Settings-->
-		<!-- Setting context menu -->
-		'abouttext' : '{$Cbucket->configs.pakplayer_contextmsg}',
-		'aboutlink' : baseurl,
-		<!-- Setting context menu ends -->
+		
 		
 		
 		<!-- Events And JS Api -->

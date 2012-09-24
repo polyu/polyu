@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 10:26:24
+<?php /* Smarty version 2.6.18, created on 2012-09-24 16:21:58
          compiled from /home/wwwroot/styles/cbv2new/layout/blocks/quicklist/block.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/blocks/quicklist/block.html', 3, false),)), $this); ?>

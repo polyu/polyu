@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-14 09:53:13
+<?php /* Smarty version 2.6.18, created on 2012-09-24 14:10:39
          compiled from /home/wwwroot/styles/cbv2new/layout/blocks/manage/account_video.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'getThumb', '/home/wwwroot/styles/cbv2new/layout/blocks/manage/account_video.html', 10, false),array('function', 'videoLink', '/home/wwwroot/styles/cbv2new/layout/blocks/manage/account_video.html', 11, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/blocks/manage/account_video.html', 11, false),array('modifier', 'truncate', '/home/wwwroot/styles/cbv2new/layout/blocks/manage/account_video.html', 10, false),array('modifier', 'date_format', '/home/wwwroot/styles/cbv2new/layout/blocks/manage/account_video.html', 15, false),array('modifier', 'number_format', '/home/wwwroot/styles/cbv2new/layout/blocks/manage/account_video.html', 16, false),array('modifier', 'lang', '/home/wwwroot/styles/cbv2new/layout/blocks/manage/account_video.html', 45, false),)), $this); ?>

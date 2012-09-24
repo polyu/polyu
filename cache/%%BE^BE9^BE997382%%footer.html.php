@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 10:12:39
+<?php /* Smarty version 2.6.18, created on 2012-09-24 14:03:28
          compiled from /home/wwwroot/styles/cbv2new/layout/footer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format', '/home/wwwroot/styles/cbv2new/layout/footer.html', 3, false),array('function', 'foot_menu', '/home/wwwroot/styles/cbv2new/layout/footer.html', 7, false),)), $this); ?>

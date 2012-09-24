@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 04:39:25
+<?php /* Smarty version 2.6.18, created on 2012-09-24 15:08:01
          compiled from /home/wwwroot/styles/cbv2new/layout/edit_video.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getname', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 25, false),array('modifier', 'getext', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 26, false),array('modifier', 'get_thumb_num', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 26, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 26, false),array('function', 'videoLink', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 43, false),array('function', 'ANCHOR', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 78, false),)), $this); ?>
