@@ -407,6 +407,45 @@ class cbactions
 	
 	
 	/**
+	 * Function used to create new camera
+	 * @param ARRAY
+	 */
+	function create_camera($params)
+	{
+		global $db;
+		$name = mysql_clean($params['name']);
+		$describe=mysql_clean($params['describe']);
+		$address=mysql_clean($params['address']);
+		if(!userid())
+			e(lang("please_login_create_camera"));
+		elseif(empty($name))
+			e(lang("please_enter_camera_name"));
+		elseif($this->playlist_exists($name,userid(),$this->type))
+			e(sprintf(lang("camera_with_this_name_arlready_exists"),$name));
+		else
+		{
+			$db->insert(tbl('livecam'),array("cam_name","cam_describe","userid","date_added","cam_address"),
+									  array($name,$describe,userid(),now(),$address));
+			e(lang("new_camera_created"),"m");
+			$pid = $db->insert_id();
+			
+			//Logging Playlist			
+			$log_array = array
+			(
+			 'success'=>'yes',
+			 'details'=> "created Camera",
+			 'action_obj_id' => $pid,
+			);
+			
+			insert_log('add_playlist',$log_array);
+					
+			return $pid;
+		}
+		
+		return false;
+	}
+	
+	/**
 	 * Function used to create new playlist
 	 * @param ARRAY
 	 */
@@ -460,6 +499,21 @@ class cbactions
 			return false;
 	}
 	
+		/**
+	 * Function used to check weather camera already exists or not
+	 */
+	function camera_exists($name,$user,$type=NULL)
+	{
+		global $db;
+	
+		$count = $db->count(tbl('livecam'),"playlist_id"," cam_name='$name' ");
+
+		if($count)
+			return true;
+		else
+			return false;
+	}
+	
 	/**
 	 * Function used to get playlist
 	 */
@@ -500,6 +554,31 @@ class cbactions
 											array($id,$pid,now(),$this->type,userid()));
 			e(sprintf(lang('this_thing_added_playlist'),$this->name),"m");
 			return $db->insert_id();
+		}
+	}
+	
+	/**
+	 * Function used to add new item in camera
+	 */
+	function add_camera_item($pid,$id)
+	{
+		global $db;
+		
+		if(!$this->exists($id))
+			e(sprintf(lang("obj_not_exists"),$this->name));
+		elseif(!userid())
+			e(lang('you_not_logged_in'));
+		else if($pid=='-1')
+		{
+			$db->update(tbl('video'),array('remote_play_url'),array(''),"videoid=".$id);
+			e(sprintf(lang('this_thing_added_camera'),$this->name),"m");
+		}
+		elseif(!$this->get_camera($pid))
+			e(lang("camera_not_exist"));
+		else
+		{
+			$db->update(tbl('video'),array('remote_play_url'),array($pid),"videoid=".$id);
+			e(sprintf(lang('this_thing_added_camera'),$this->name),"m");
 		}
 	}
 	
@@ -552,6 +631,32 @@ class cbactions
 	}
 	
 	/**
+	 * Function used to update cameras details
+	 */
+	function edit_camera($params)
+	{
+		global $db;
+		$name = mysql_clean($params['name']);
+		$describe = mysql_clean($params['describe']);
+		$pdetails = $this->get_camera($params['pid']);
+		$address= mysql_clean($params['address']);
+		if(!$pdetails)
+			e(lang("camera_not_exist"));
+		elseif(!userid())
+			e(lang("you_not_logged_in"));
+		elseif(empty($name))
+			e(lang("please_enter_camera_name"));
+		elseif($this->camera_exists($name,userid()) && $pdetails['cam_name'] !=$name)
+			e(sprintf(lang("camera_with_this_name_arlready_exists"),$name));
+		else
+		{
+			$db->update(tbl('livecam'),array("cam_name","cam_describe","cam_address"),
+									  array($name,$describe,$address)," cam_id='".$params['pid']."'");
+			e(lang("camera_updated"),"m");
+		}
+	}
+	
+	/**
 	 * Function used to update playlist details
 	 */
 	function edit_playlist($params)
@@ -598,6 +703,45 @@ class cbactions
 		}
 	}
 	
+	
+	/**
+	 * Function used to get playlist
+	 */
+	function get_camera($id,$user=NULL)
+	{
+		global $db;
+		$user_cond;
+		if($user && !has_access('admin_access',true))
+			$user_cond = " AND userid='$user'";
+			
+		$result = $db->select(tbl('livecam'),"*"," cam_id='$id' $user_cond");
+		if($db->num_rows>0)
+			return $result[0];
+		else
+			return false;
+	}
+	
+	/**
+	 * Function used to delete playlist
+	 */
+	function delete_camera($id)
+	{
+		global $db;
+		$camera = $this->get_camera($id);
+		if(!$camera)
+			e(lang("camera_not_exist"));
+		elseif($camera['userid']!=userid() && !has_access('admin_access',TRUE))
+			e(lang("you_dont_hv_permission_del_playlist"));
+		else
+		{
+			$db->delete(tbl('livecam'),
+						array("cam_id"),array($id));
+			$db->update(tbl('video'),array('remote_play_url'),array('0'),'remote_play_url='.$id);
+			e(lang("camera_delete_msg"),"m");
+		}
+	}
+	
+	
 	/**
 	 * Function used to get playlists
 	 */
@@ -613,6 +757,19 @@ class cbactions
 			$result = $db->select(tbl($this->playlist_tbl),"*"," playlist_type='".$this->type."' AND userid='".userid()."'",false,'date_added asc');
 		}
 		
+		if($db->num_rows>0)
+			return $result;
+		else
+			return false;
+	}
+	
+	/**
+	 * Function used to get cameras
+	 */
+	function get_cameras()
+	{
+		global $db;
+		$result = $db->select(tbl('livecam'),"*",false,false,'date_added desc');
 		if($db->num_rows>0)
 			return $result;
 		else

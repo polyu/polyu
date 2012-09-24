@@ -358,6 +358,9 @@ class CBvideo extends CBCategory
 				{
 					$cbvid->action->add_playlist_item($pid_temp,$vid);
 				}
+				$cpid_temp=mysql_clean($_POST['camera_id']);
+				if($cpid_temp!='0')
+				$cbvid->action->add_camera_item($cpid_temp,$vid);
 				//===hack by jiaqi====
 				$db->update(tbl('video'),$query_field,$query_val," videoid='$vid'");
 				//echo $db->db_query;

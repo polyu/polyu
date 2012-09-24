@@ -1,6 +1,6 @@
 {assign var='video_fields' value=$Upload->load_video_fields($input)}
 {assign var='playlists' value= $cbvid->action->get_playlists()}
-
+{assign var='cameras' value= $cbvid->action->get_cameras()}
 
 <div class="upload_info" id="upload_form{$objId}" style="margin-top:10px;">
     <h2>{$vdo_upload_step|sprintf:1}</h2>
@@ -81,7 +81,22 @@
                 							
                 	<option value="-1" selected="selected">None</option>
                 {section name=plist loop=$playlists}
-  											<option value="{$playlists[plist].playlist_id}" selected="selected"> {$playlists[plist].playlist_name}</option>
+  											<option value="{$playlists[plist].playlist_id}" > {$playlists[plist].playlist_name}</option>
+                								
+                {/section}
+                	</select>
+                </div>
+                </div>
+            </div>
+            <div style="float:left; width:200px; margin-left:10px;">
+                <div class="field">
+                <label for="playlist" class="label">Camera</label>
+                <div style="overflow:auto; height:100%">
+                <select id="camera_id" name="camera_id">
+                							
+                	<option value="-1" selected="selected">None</option>
+                {section name=plist loop=$cameras}
+  											<option value="{$cameras[plist].cam_id}" > {$cameras[plist].cam_name}</option>
                 								
                 {/section}
                 	</select>

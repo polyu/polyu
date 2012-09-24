@@ -35,18 +35,19 @@ switch($mode)
 		{
 			$plid = mysql_clean($_GET['delete_camera']);
 			$cbvid->action->delete_camera($plid);
+			
 		}
 		
 		if(isset($_POST['delete_cameras']))
 		{
-			$cameras = post('check_cameras');
+			$cameras = post('check_camera');
 			
 			if(count($cameras)>0)
 			{
 				foreach($cameras as $camera)
 				{
 					$camera = mysql_clean($camera);
-					$cbvid->action->delete_playlist($camera);
+					$cbvid->action->delete_camera($camera);
 				}
 				
 				if(!error())
@@ -71,7 +72,7 @@ switch($mode)
 			$cbvid->action->create_camera($params);
 		}
 		
-		assign('mode','manage_camera');
+		assign('mode','manage_cameras');
 		//Getting List of available playlists
 		$cameras = $cbvid->action->get_cameras();
 		assign('cameras',$cameras);
@@ -84,11 +85,13 @@ switch($mode)
 	{
 		assign('mode','edit_camera');
 		$pid = $_GET['pid'];
+		
 		if(isset($_POST['edit_camera']))
 		{
 			$params = array('name'=>mysql_clean($_POST['name']),'describe'=>mysql_clean($_POST['describe']),'address'=>mysql_clean($_POST['address']),'pid'=>mysql_clean($pid));
 			$cbvid->action->edit_camera($params);
 		}
+		assign('camera',$cbvid->action->get_camera($pid));	
 		
 	}
 	break;

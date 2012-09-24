@@ -15,9 +15,7 @@ var playlist_detail={$playlist_detail};
 		flashplayer: cb_player_file,
 		fullscreen: 'true',
 		skin:cb_player_url+'/skins/NewTubeDark.xml',
-		{if $ytcode}
-		file: 'http://www.youtube.com/watch?v={$ytcode}',
-		{/if}
+		
 		{if $normal_vid_file}
 		file: normal_video_file,
 		{else}
@@ -26,6 +24,7 @@ var playlist_detail={$playlist_detail};
        'playlist.size': '320',
        repeat: 'list',
 		{/if}
+		
 		image: preview_img,
 		width: '100%',
 		height:'{$player_data.height}',

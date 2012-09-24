@@ -1,10 +1,10 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 13:31:59
+<?php /* Smarty version 2.6.18, created on 2012-09-24 04:42:55
          compiled from /home/wwwroot/styles/cbv2new/layout/blocks/upload/form.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'sprintf', '/home/wwwroot/styles/cbv2new/layout/blocks/upload/form.html', 6, false),array('function', 'ANCHOR', '/home/wwwroot/styles/cbv2new/layout/blocks/upload/form.html', 34, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/blocks/upload/form.html', 92, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'sprintf', '/home/wwwroot/styles/cbv2new/layout/blocks/upload/form.html', 6, false),array('function', 'ANCHOR', '/home/wwwroot/styles/cbv2new/layout/blocks/upload/form.html', 34, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/blocks/upload/form.html', 107, false),)), $this); ?>
 <?php $this->assign('video_fields', $this->_tpl_vars['Upload']->load_video_fields($this->_tpl_vars['input'])); ?>
 <?php $this->assign('playlists', $this->_tpl_vars['cbvid']->action->get_playlists()); ?>
-
+<?php $this->assign('cameras', $this->_tpl_vars['cbvid']->action->get_cameras()); ?>
 
 <div class="upload_info" id="upload_form<?php echo $this->_tpl_vars['objId']; ?>
 " style="margin-top:10px;">
@@ -135,7 +135,47 @@ $this->_sections['plist']['first']      = ($this->_sections['plist']['iteration'
 $this->_sections['plist']['last']       = ($this->_sections['plist']['iteration'] == $this->_sections['plist']['total']);
 ?>
   											<option value="<?php echo $this->_tpl_vars['playlists'][$this->_sections['plist']['index']]['playlist_id']; ?>
-" selected="selected"> <?php echo $this->_tpl_vars['playlists'][$this->_sections['plist']['index']]['playlist_name']; ?>
+" > <?php echo $this->_tpl_vars['playlists'][$this->_sections['plist']['index']]['playlist_name']; ?>
+</option>
+                								
+                <?php endfor; endif; ?>
+                	</select>
+                </div>
+                </div>
+            </div>
+            <div style="float:left; width:200px; margin-left:10px;">
+                <div class="field">
+                <label for="playlist" class="label">Camera</label>
+                <div style="overflow:auto; height:100%">
+                <select id="camera_id" name="camera_id">
+                							
+                	<option value="-1" selected="selected">None</option>
+                <?php unset($this->_sections['plist']);
+$this->_sections['plist']['name'] = 'plist';
+$this->_sections['plist']['loop'] = is_array($_loop=$this->_tpl_vars['cameras']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['plist']['show'] = true;
+$this->_sections['plist']['max'] = $this->_sections['plist']['loop'];
+$this->_sections['plist']['step'] = 1;
+$this->_sections['plist']['start'] = $this->_sections['plist']['step'] > 0 ? 0 : $this->_sections['plist']['loop']-1;
+if ($this->_sections['plist']['show']) {
+    $this->_sections['plist']['total'] = $this->_sections['plist']['loop'];
+    if ($this->_sections['plist']['total'] == 0)
+        $this->_sections['plist']['show'] = false;
+} else
+    $this->_sections['plist']['total'] = 0;
+if ($this->_sections['plist']['show']):
+
+            for ($this->_sections['plist']['index'] = $this->_sections['plist']['start'], $this->_sections['plist']['iteration'] = 1;
+                 $this->_sections['plist']['iteration'] <= $this->_sections['plist']['total'];
+                 $this->_sections['plist']['index'] += $this->_sections['plist']['step'], $this->_sections['plist']['iteration']++):
+$this->_sections['plist']['rownum'] = $this->_sections['plist']['iteration'];
+$this->_sections['plist']['index_prev'] = $this->_sections['plist']['index'] - $this->_sections['plist']['step'];
+$this->_sections['plist']['index_next'] = $this->_sections['plist']['index'] + $this->_sections['plist']['step'];
+$this->_sections['plist']['first']      = ($this->_sections['plist']['iteration'] == 1);
+$this->_sections['plist']['last']       = ($this->_sections['plist']['iteration'] == $this->_sections['plist']['total']);
+?>
+  											<option value="<?php echo $this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_id']; ?>
+" > <?php echo $this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_name']; ?>
 </option>
                 								
                 <?php endfor; endif; ?>
