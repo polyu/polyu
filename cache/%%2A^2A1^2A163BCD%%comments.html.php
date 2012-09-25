@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 14:39:38
+<?php /* Smarty version 2.6.18, created on 2012-09-25 13:49:46
          compiled from /home/wwwroot/styles/cbv2new/layout/blocks/comments/comments.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/blocks/comments/comments.html', 13, false),array('modifier', 'sprintf', '/home/wwwroot/styles/cbv2new/layout/blocks/comments/comments.html', 13, false),)), $this); ?>

@@ -20,13 +20,28 @@ if($cam_id)
 	$camera=$cbvid->action->get_camera($cam_id);
 	if($camera)
 	{
+		$address='';
+		if(strpos($camera['cam_address'],'http://')===0)
+		{
+			$address='camera/httpview.php?address='.$camera['cam_address'];
+		}
+		elseif (strpos($camera['cam_address'],'rtmp://')===0)
+		{
+			$address='camera/rtmpview.php?address='.$camera['cam_address'];
+		}
+		else 
+		{
+			$address='camera/rtspview.php?address='.$camera['cam_address'];
+		}
+		
 		if($_GET['fullscreen']=='1')
 		{
-			redirect_to($camera['cam_address']);
+			redirect_to($address);
 		}
 		else
 		{
 			assign("camera",$camera);
+			assign("address",$address);
 			template_files('watch_camera.html');
 			display_it();
 		}

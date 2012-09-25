@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-25 10:07:50
+<?php /* Smarty version 2.6.18, created on 2012-09-25 14:20:25
          compiled from /home/wwwroot/player/cbplayer/cbplayer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'getThumb', '/home/wwwroot/player/cbplayer/cbplayer.html', 10, false),)), $this); ?>
@@ -23,14 +23,15 @@ var embed_type = '<?php echo $this->_tpl_vars['Cbucket']->configs['embed_type'];
 ';
 var playlist_detail=<?php echo $this->_tpl_vars['playlist_detail']; ?>
 ;
-
+var remote_url='<?php echo $this->_tpl_vars['vdata']['remote_play_url']; ?>
+';
 		jwplayer("mediaplayer").setup({
 		flashplayer: cb_player_file,
 		fullscreen: 'true',
 		skin:cb_player_url+'/skins/NewTubeDark.xml',
-		
 		<?php if ($this->_tpl_vars['normal_vid_file']): ?>
 		file: normal_video_file,
+		
 		<?php else: ?>
 		playlist:<?php echo $this->_tpl_vars['playlist_detail']; ?>
 ,
@@ -85,17 +86,27 @@ var playlist_detail=<?php echo $this->_tpl_vars['playlist_detail']; ?>
 			},
 			onPlay:function()
 			{
-					var item=jwplayer("mediaplayer").getPlaylistItem();
-					
-					if(item['remoteurl']==''||item['remoteurl']==undefined)
-						{
-							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld');
-						}
+			
+					if(normal_video_file=='')
+					{
+						
+						var item=jwplayer("mediaplayer").getPlaylistItem();
+						if(item['remoteurl']==''||item['remoteurl']==undefined)
+							{
+								jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld');
+							}
+						else
+							{
+								jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld', OpenLiveVideo, 'player/cbplayer/skins/live.png', 'player/cbplayer/skins/live.png');
+								
+							}
+					}
 					else
-						{
+					{
+						if(remote_url!='')
 							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld', OpenLiveVideo, 'player/cbplayer/skins/live.png', 'player/cbplayer/skins/live.png');
-							
-						}
+						
+					}
 				
 			}
 		}
@@ -103,7 +114,7 @@ var playlist_detail=<?php echo $this->_tpl_vars['playlist_detail']; ?>
 </script>
 
 <div id="LiveVideo" style="display:none" title="Live Video">
-<iframe id="LiveVideoBox" src="" style="width:100%;height:600px;border-width:0;"></iframe>
+<iframe id="LiveVideoBox" src="" style="width:100%;height:500px;border-width:0;"></iframe>
 </div>
 <script>
 
@@ -115,10 +126,17 @@ function OpenLiveVideo()
 {
 	jwplayer("mediaplayer").pause();
 	jwplayer("mediaplayer").setFullscreen(false);
+	if(remote_url==\'\')
+	{
 	var item=jwplayer("mediaplayer").getPlaylistItem();
 	$("#LiveVideoBox").attr("src","watch_camera.php?fullscreen=1&cam_id="+item[\'remoteurl\']);
+	}
+	else
+	{
+	$("#LiveVideoBox").attr("src","watch_camera.php?fullscreen=1&cam_id="+remote_url);
+	}
 	$( "#LiveVideo" ).dialog({
-	height: 700,
+	height: 600,
 	width:900,
 	buttons: {
 				"OK": function() {

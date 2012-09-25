@@ -1,6 +1,7 @@
 {assign var='video_fields' value=$Upload->load_video_fields($v)}
 {assign var='playlists' value= $cbvid->action->get_playlists()}
 {assign var='cameras' value= $cbvid->action->get_cameras()}
+{assign var='currentcamera' value=$cbvid->action->get_camera_by_video($v.videoid)}
 
 <div>
  {include file="$style_dir/blocks/manage/account_left.html"}
@@ -61,10 +62,10 @@
  <div class="account_field_label" align="right"><strong><label for="playlist_id">{lang code='Camera'}</label></strong></div>
  <div class="account_field">
  <select id="camera_id" name="camera_id">
- 	<option value="0" selected="selected">Click here to modify.</option>
+ 	
  	<option value="-1">None</option>
 {section name=plist loop=$cameras}
-<option value="{$cameras[plist].cam_id}"> {$cameras[plist].cam_name}</option>
+<option value="{$cameras[plist].cam_id}" {if $cameras[plist].cam_name==$currentcamera}selected="selected"{/if}> {$cameras[plist].cam_name}</option>
 {/section}
 	</select>
 	</div>

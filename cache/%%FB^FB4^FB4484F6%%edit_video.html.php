@@ -1,10 +1,11 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 15:08:01
+<?php /* Smarty version 2.6.18, created on 2012-09-25 14:37:09
          compiled from /home/wwwroot/styles/cbv2new/layout/edit_video.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getname', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 25, false),array('modifier', 'getext', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 26, false),array('modifier', 'get_thumb_num', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 26, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 26, false),array('function', 'videoLink', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 43, false),array('function', 'ANCHOR', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 78, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'getname', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 26, false),array('modifier', 'getext', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 27, false),array('modifier', 'get_thumb_num', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 27, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 27, false),array('function', 'videoLink', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 44, false),array('function', 'ANCHOR', '/home/wwwroot/styles/cbv2new/layout/edit_video.html', 79, false),)), $this); ?>
 <?php $this->assign('video_fields', $this->_tpl_vars['Upload']->load_video_fields($this->_tpl_vars['v'])); ?>
 <?php $this->assign('playlists', $this->_tpl_vars['cbvid']->action->get_playlists()); ?>
 <?php $this->assign('cameras', $this->_tpl_vars['cbvid']->action->get_cameras()); ?>
+<?php $this->assign('currentcamera', $this->_tpl_vars['cbvid']->action->get_camera_by_video($this->_tpl_vars['v']['videoid'])); ?>
 
 <div>
  <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -113,7 +114,7 @@ $this->_sections['plist']['last']       = ($this->_sections['plist']['iteration'
 </label></strong></div>
  <div class="account_field">
  <select id="camera_id" name="camera_id">
- 	<option value="0" selected="selected">Click here to modify.</option>
+ 	
  	<option value="-1">None</option>
 <?php unset($this->_sections['plist']);
 $this->_sections['plist']['name'] = 'plist';
@@ -140,7 +141,7 @@ $this->_sections['plist']['first']      = ($this->_sections['plist']['iteration'
 $this->_sections['plist']['last']       = ($this->_sections['plist']['iteration'] == $this->_sections['plist']['total']);
 ?>
 <option value="<?php echo $this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_id']; ?>
-"> <?php echo $this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_name']; ?>
+" <?php if ($this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_name'] == $this->_tpl_vars['currentcamera']): ?>selected="selected"<?php endif; ?>> <?php echo $this->_tpl_vars['cameras'][$this->_sections['plist']['index']]['cam_name']; ?>
 </option>
 <?php endfor; endif; ?>
 	</select>

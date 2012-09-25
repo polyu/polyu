@@ -15,4 +15,5 @@ if($pos===0)
 {
 	echo "what!";
 }
+$cbvid->action->get_cameras()
 ?>  

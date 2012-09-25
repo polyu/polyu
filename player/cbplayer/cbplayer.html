@@ -10,14 +10,14 @@ var ytcode = '{$ytcode}';
 var preview_img = '{getThumb vdetails=$vdata size="big"}';
 var embed_type = '{$Cbucket->configs.embed_type}';
 var playlist_detail={$playlist_detail};
-
+var remote_url='{$vdata.remote_play_url}';
 		jwplayer("mediaplayer").setup({ldelim}
 		flashplayer: cb_player_file,
 		fullscreen: 'true',
 		skin:cb_player_url+'/skins/NewTubeDark.xml',
-		
 		{if $normal_vid_file}
 		file: normal_video_file,
+		
 		{else}
 		playlist:{$playlist_detail},
 		'playlist.position': 'right',
@@ -67,17 +67,27 @@ var playlist_detail={$playlist_detail};
 			{rdelim},
 			onPlay:function()
 			{ldelim}
-					var item=jwplayer("mediaplayer").getPlaylistItem();
-					
-					if(item['remoteurl']==''||item['remoteurl']==undefined)
-						{ldelim}
-							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld');
-						{rdelim}
+			
+					if(normal_video_file=='')
+					{ldelim}
+						
+						var item=jwplayer("mediaplayer").getPlaylistItem();
+						if(item['remoteurl']==''||item['remoteurl']==undefined)
+							{ldelim}
+								jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld');
+							{rdelim}
+						else
+							{ldelim}
+								jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld', OpenLiveVideo, 'player/cbplayer/skins/live.png', 'player/cbplayer/skins/live.png');
+								
+							{rdelim}
+					{rdelim}
 					else
-						{ldelim}
+					{ldelim}
+						if(remote_url!='')
 							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld', OpenLiveVideo, 'player/cbplayer/skins/live.png', 'player/cbplayer/skins/live.png');
-							
-						{rdelim}
+						
+					{rdelim}
 				
 			{rdelim}
 		{rdelim}
@@ -85,7 +95,7 @@ var playlist_detail={$playlist_detail};
 </script>
 
 <div id="LiveVideo" style="display:none" title="Live Video">
-<iframe id="LiveVideoBox" src="" style="width:100%;height:600px;border-width:0;"></iframe>
+<iframe id="LiveVideoBox" src="" style="width:100%;height:500px;border-width:0;"></iframe>
 </div>
 <script>
 
@@ -97,10 +107,17 @@ function OpenLiveVideo()
 {
 	jwplayer("mediaplayer").pause();
 	jwplayer("mediaplayer").setFullscreen(false);
+	if(remote_url=='')
+	{
 	var item=jwplayer("mediaplayer").getPlaylistItem();
 	$("#LiveVideoBox").attr("src","watch_camera.php?fullscreen=1&cam_id="+item['remoteurl']);
+	}
+	else
+	{
+	$("#LiveVideoBox").attr("src","watch_camera.php?fullscreen=1&cam_id="+remote_url);
+	}
 	$( "#LiveVideo" ).dialog({
-	height: 700,
+	height: 600,
 	width:900,
 	buttons: {
 				"OK": function() {

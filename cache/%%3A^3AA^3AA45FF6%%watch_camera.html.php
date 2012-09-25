@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 15:41:18
+<?php /* Smarty version 2.6.18, created on 2012-09-25 13:08:41
          compiled from /home/wwwroot/styles/cbv2new/layout/watch_camera.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'description', '/home/wwwroot/styles/cbv2new/layout/watch_camera.html', 18, false),array('modifier', 'truncate', '/home/wwwroot/styles/cbv2new/layout/watch_camera.html', 18, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/watch_camera.html', 18, false),)), $this); ?>
@@ -7,7 +7,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'description
 </div>
 </div>
 <div class="player_container" id="normal_player_cont">
-   <iframe src="<?php echo $this->_tpl_vars['camera']['cam_address']; ?>
+   <iframe src="<?php echo $this->_tpl_vars['address']; ?>
 " style="width:100%;height:350px;border:0px;"></iframe>
 </div>
 <div class="video_details clearfix">

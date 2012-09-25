@@ -780,6 +780,31 @@ class cbactions
 			return false;
 	}
 	
+	
+	/**
+	 * Function used to get cameras by video
+	 */
+	function get_camera_by_video($vid)
+	{
+		global $db;
+		$result = $db->select(tbl('video'),'remote_play_url'," videoid='$vid'");
+		if($result)
+		{
+			$cid=$result[0]['remote_play_url'];
+			$result_owner = $db->select(tbl('livecam'),'cam_name'," cam_id='$cid'");
+			if($result_owner)
+			{
+				return $result_owner[0]['cam_name'];
+			}
+			else return false;
+			
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
 	function get_allplaylists()
 	{
 		global $db;

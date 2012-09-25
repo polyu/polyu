@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 14:39:37
+<?php /* Smarty version 2.6.18, created on 2012-09-25 13:49:46
          compiled from /home/wwwroot/styles/cbv2new/layout/blocks/rating.html */ ?>
 <!-- <div id="rating_container">
 <ul class="big_stars <?php echo $this->_tpl_vars['disable']; ?>
