@@ -68,7 +68,7 @@ switch($mode)
 		//Adding New Playlist
 		if(isset($_POST['add_camera']))
 		{
-			$params = array('name'=>mysql_clean($_POST['name']),'describe'=>mysql_clean($_POST['describe']),'address'=>mysql_clean($_POST['address']));
+			$params = array('name'=>mysql_clean($_POST['name']),'describe'=>mysql_clean($_POST['describe']),'address'=>mysql_clean($_POST['address']),'videouser'=>mysql_clean($_POST['videouser']),'videopass'=>mysql_clean($_POST['videopass']));
 			$cbvid->action->create_camera($params);
 		}
 		
@@ -88,7 +88,7 @@ switch($mode)
 		
 		if(isset($_POST['edit_camera']))
 		{
-			$params = array('name'=>mysql_clean($_POST['name']),'describe'=>mysql_clean($_POST['describe']),'address'=>mysql_clean($_POST['address']),'pid'=>mysql_clean($pid));
+			$params = array('name'=>mysql_clean($_POST['name']),'describe'=>mysql_clean($_POST['describe']),'address'=>mysql_clean($_POST['address']),'pid'=>mysql_clean($pid),'videouser'=>mysql_clean($_POST['videouser']),'videopass'=>mysql_clean($_POST['videopass']));
 			$cbvid->action->edit_camera($params);
 		}
 		assign('camera',$cbvid->action->get_camera($pid));	

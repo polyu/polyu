@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-25 10:08:42
+<?php /* Smarty version 2.6.18, created on 2012-09-25 15:09:05
          compiled from /home/wwwroot/styles/cbv2new/layout/manage_cameras.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 7, false),array('modifier', 'truncate', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 59, false),array('modifier', 'date_format', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 63, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 7, false),array('modifier', 'truncate', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 63, false),array('modifier', 'date_format', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 67, false),)), $this); ?>
 <div>
  <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['style_dir'])."/blocks/manage/account_left.html", 'smarty_include_vars' => array()));
@@ -36,6 +36,12 @@ unset($_smarty_tpl_vars);
     <div class="account_field_label" align="right"><strong><label for="old_pass"><?php echo smarty_lang(array('code' => 'cam_address'), $this);?>
 </label></strong></div>
     <div class="account_field"><input name="address" type="text" id="address" style="margin-bottom:10px"></div>
+    <div class="account_field_label" align="right"><strong><label for="old_pass"><?php echo smarty_lang(array('code' => 'videouser'), $this);?>
+</label></strong></div>
+    <div class="account_field"><input name="videouser" type="text" id="videouser" style="margin-bottom:10px"></div>
+    <div class="account_field_label" align="right"><strong><label for="old_pass"><?php echo smarty_lang(array('code' => 'videopass'), $this);?>
+</label></strong></div>
+    <div class="account_field"><input name="videopass" type="password" id="videopass" style="margin-bottom:10px"></div>
     </div>
 	
     <div align="right"><button name="add_camera" id="button" value="submit" class="cb_button_2"><?php echo smarty_lang(array('code' => 'add_new_camera'), $this);?>
@@ -157,6 +163,14 @@ $this->_sections['plist']['last']       = ($this->_sections['plist']['iteration'
     <div class="account_field_label" align="right"><strong><label for="old_pass"><?php echo smarty_lang(array('code' => 'cam_address'), $this);?>
 </label></strong></div>
     <div class="account_field"><input name="address" type="text" id="address" style="margin-bottom:10px" value="<?php echo $this->_tpl_vars['camera']['cam_address']; ?>
+"></div>
+    <div class="account_field_label" align="right"><strong><label for="old_pass"><?php echo smarty_lang(array('code' => 'videouser'), $this);?>
+</label></strong></div>
+    <div class="account_field"><input name="videouser" type="text" id="videouser" style="margin-bottom:10px" value="<?php echo $this->_tpl_vars['camera']['videouser']; ?>
+"></div>
+    <div class="account_field_label" align="right"><strong><label for="old_pass"><?php echo smarty_lang(array('code' => 'videopass'), $this);?>
+</label></strong></div>
+    <div class="account_field"><input name="videopass" type="password" id="videopass" style="margin-bottom:10px" value="<?php echo $this->_tpl_vars['camera']['videopass']; ?>
 "></div>
     </div>
 	

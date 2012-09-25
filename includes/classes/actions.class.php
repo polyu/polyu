@@ -416,6 +416,9 @@ class cbactions
 		$name = mysql_clean($params['name']);
 		$describe=mysql_clean($params['describe']);
 		$address=mysql_clean($params['address']);
+		$videouser=mysql_clean($params['videouser']);
+		$videopass=mysql_clean($params['videopass']);
+		if(!$videouser) $videopass='';//Not need to write to database!
 		if(!userid())
 			e(lang("please_login_create_camera"));
 		elseif(empty($name))
@@ -428,8 +431,8 @@ class cbactions
 		}
 		else
 		{
-			$db->insert(tbl('livecam'),array("cam_name","cam_describe","userid","date_added","cam_address"),
-									  array($name,$describe,userid(),now(),$address));
+			$db->insert(tbl('livecam'),array("cam_name","cam_describe","userid","date_added","cam_address",'videouser','videopass'),
+									  array($name,$describe,userid(),now(),$address,$videouser,$videopass));
 			e(lang("new_camera_created"),"m");
 			$pid = $db->insert_id();
 			
@@ -644,6 +647,9 @@ class cbactions
 		$describe = mysql_clean($params['describe']);
 		$pdetails = $this->get_camera($params['pid']);
 		$address= mysql_clean($params['address']);
+		$videouser=mysql_clean($params['videouser']);
+		$videopass=mysql_clean($params['videopass']);
+		if(!$videouser) $videopass='';//Not need to write!
 		if(!$pdetails)
 			e(lang("camera_not_exist"));
 		elseif(!userid())
@@ -654,8 +660,8 @@ class cbactions
 			e(sprintf(lang("camera_with_this_name_arlready_exists"),$name));
 		else
 		{
-			$db->update(tbl('livecam'),array("cam_name","cam_describe","cam_address"),
-									  array($name,$describe,$address)," cam_id='".$params['pid']."'");
+			$db->update(tbl('livecam'),array("cam_name","cam_describe","cam_address",'videouser','videopass'),
+									  array($name,$describe,$address,$videouser,$videopass)," cam_id='".$params['pid']."'");
 			e(lang("camera_updated"),"m");
 		}
 	}

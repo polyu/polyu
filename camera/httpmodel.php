@@ -1,7 +1,8 @@
 <?
-header("Content-type:image/gif");
+session_start();  
+//header("Content-type:image/gif");
 header("cache-control:no-cache,must-revalidate");
-$address=$_GET['address'];
+$address=$_SESSION['cam_address'];
 // 1. 初始化
 $ch = curl_init();
 // 2. 设置选项，包括URL
@@ -16,7 +17,6 @@ if($output!==false)
 {
 	echo $output;
 }
-
 // 4. 释放curl句柄
 curl_close($ch);
 ?>

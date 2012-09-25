@@ -8,7 +8,6 @@
  
 define("THIS_PAGE",'manage_playlists');
 define("PARENT_PAGE",'videos');
-
 require 'includes/config.inc.php';
 $userquery->logincheck();
 $udetails = $userquery->get_user_details(userid());
@@ -23,17 +22,19 @@ if($cam_id)
 		$address='';
 		if(strpos($camera['cam_address'],'http://')===0)
 		{
-			$address='camera/httpview.php?address='.$camera['cam_address'];
+			$address='camera/httpview.php';
 		}
 		elseif (strpos($camera['cam_address'],'rtmp://')===0)
 		{
-			$address='camera/rtmpview.php?address='.$camera['cam_address'];
+			$address='camera/rtmpview.php';
 		}
 		else 
 		{
-			$address='camera/rtspview.php?address='.$camera['cam_address'];
+			$address='camera/rtspview.php';
 		}
-		
+		$_SESSION['cam_address']=$camera['cam_address'];
+		$_SESSION['videouser']=$camera['videouser'];
+		$_SESSION['videopass']=$camera['videopass'];
 		if($_GET['fullscreen']=='1')
 		{
 			redirect_to($address);

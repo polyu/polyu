@@ -1,4 +1,3 @@
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -9,7 +8,7 @@ var contrast=3;
 var mode=2;
 var flip=0;
 var fps=0;
-var address="<?echo $_GET['address'];?>";
+
 
 function Click(){ window.event.returnValue=false;}
 
@@ -18,7 +17,7 @@ var g_ptzcmd=-1;
 function OnBtnRefresh()
 {
 	window.status=" ";
-	document.getElementById("imgDisplay").src = "httpmodel.php?address="+address+'&t='+Math.round(Math.random()*10000);	
+	document.getElementById("imgDisplay").src = "httpmodel.php?"+Math.round(Math.random()*10000);	
 	window.status=" ";
 }
 
@@ -83,7 +82,7 @@ function GetXhrObject()
 		}
     }
 	return xmlHttp;	
-}
+}address="+address
 function Playmage(imgsrc)
 {
 
@@ -121,7 +120,7 @@ function Playmage(imgsrc)
 
 function PlayImg()
 {
-	Playmage("httpmodel.php?address="+address+'&t='+Math.round(Math.random()*10000));	
+	Playmage("httpmodel.php?"+Math.round(Math.random()*10000);	
 }
 
 </script>
