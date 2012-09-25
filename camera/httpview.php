@@ -1,3 +1,4 @@
+<?session_start();?>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -17,7 +18,7 @@ var g_ptzcmd=-1;
 function OnBtnRefresh()
 {
 	window.status=" ";
-	document.getElementById("imgDisplay").src = "httpmodel.php?"+Math.round(Math.random()*10000);	
+	document.getElementById("imgDisplay").src = "httpmodel.php";	
 	window.status=" ";
 }
 
@@ -82,7 +83,7 @@ function GetXhrObject()
 		}
     }
 	return xmlHttp;	
-}address="+address
+}
 function Playmage(imgsrc)
 {
 
@@ -120,12 +121,13 @@ function Playmage(imgsrc)
 
 function PlayImg()
 {
-	Playmage("httpmodel.php?"+Math.round(Math.random()*10000);	
+	Playmage("httpmodel.php");	
 }
 
 </script>
 </head>
 <body onLoad="body_onload()">
+
 <table width="100%">
     <tr><td align="center" colspan="3"><img src="" alt="snapshot" id="imgDisplay" name="imgDisplay" width="480" height="360"/></td></tr>
    
