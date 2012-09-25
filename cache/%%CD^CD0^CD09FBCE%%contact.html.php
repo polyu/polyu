@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 14:14:19
+<?php /* Smarty version 2.6.18, created on 2012-09-25 10:18:42
          compiled from /home/wwwroot/styles/cbv2new/layout/contact.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/contact.html', 1, false),array('function', 'load_captcha', '/home/wwwroot/styles/cbv2new/layout/contact.html', 22, false),array('modifier', 'capitalize', '/home/wwwroot/styles/cbv2new/layout/contact.html', 8, false),)), $this); ?>

@@ -7,6 +7,11 @@
         {foreach from=$link item=alink key=link_name}
         	<li><a href="{$alink}">{$link_name}</a></li>
         {/foreach}
+         {if $name=='Videos'}
+         		{if has_access('admin_access',true)}
+         		<li><a href="manage_cameras.php">Manage Camera</a></li>
+         		{/if}
+         {/if}
         </ul>
     </li>
     {/foreach}

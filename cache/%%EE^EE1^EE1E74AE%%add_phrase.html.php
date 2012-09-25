@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-22 07:50:14
+<?php /* Smarty version 2.6.18, created on 2012-09-25 10:36:49
          compiled from /home/wwwroot/admin_area/styles/cbv2/layout/add_phrase.html */ ?>
 <h2>Add New Phrase</h2>
 <form name="form1" method="post" action="">

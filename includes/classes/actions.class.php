@@ -422,6 +422,10 @@ class cbactions
 			e(lang("please_enter_camera_name"));
 		elseif($this->playlist_exists($name,userid(),$this->type))
 			e(sprintf(lang("camera_with_this_name_arlready_exists"),$name));
+		elseif( (strpos($address, 'rtsp://') !== 0) && (strpos($address, 'http://') !== 0) && (strpos($address, 'rtmp://') !== 0) )
+		{
+			e(lang("please_enter_correct_camera_name"));
+		}
 		else
 		{
 			$db->insert(tbl('livecam'),array("cam_name","cam_describe","userid","date_added","cam_address"),
@@ -736,7 +740,7 @@ class cbactions
 		{
 			$db->delete(tbl('livecam'),
 						array("cam_id"),array($id));
-			$db->update(tbl('video'),array('remote_play_url'),array('0'),'remote_play_url='.$id);
+			$db->update(tbl('video'),array('remote_play_url'),array(''),'remote_play_url='.$id);
 			e(lang("camera_delete_msg"),"m");
 		}
 	}

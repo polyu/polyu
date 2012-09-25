@@ -11,6 +11,9 @@
             	<li><a href="{$fm.link}" {if $fm.target} target="{$fm.target}"{/if} {if $fm.onclick} onclick="{$fm.onclick}" {/if}>{$fm.name}</a></li>
             {/if}
         {/foreach}
+        {if $userquery->login_check('',true)}
+        <li><a href="{link name='logout'}">{lang code='logout'}</a></li>
+        {/if}
     </ul>
     <div class="clearfix"></div>
     

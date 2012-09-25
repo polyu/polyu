@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 14:03:28
+<?php /* Smarty version 2.6.18, created on 2012-09-25 10:08:29
          compiled from /home/wwwroot/styles/cbv2new/layout/footer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format', '/home/wwwroot/styles/cbv2new/layout/footer.html', 3, false),array('function', 'foot_menu', '/home/wwwroot/styles/cbv2new/layout/footer.html', 7, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format', '/home/wwwroot/styles/cbv2new/layout/footer.html', 3, false),array('function', 'foot_menu', '/home/wwwroot/styles/cbv2new/layout/footer.html', 7, false),array('function', 'link', '/home/wwwroot/styles/cbv2new/layout/footer.html', 15, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/footer.html', 15, false),)), $this); ?>
 <div class="footer">
 	<div class="footer_copyr">
     	&copy; <?php echo $this->_tpl_vars['title']; ?>
@@ -24,6 +24,11 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format
 </a></li>
             <?php endif; ?>
         <?php endforeach; endif; unset($_from); ?>
+        <?php if ($this->_tpl_vars['userquery']->login_check('',true)): ?>
+        <li><a href="<?php echo cblink(array('name' => 'logout'), $this);?>
+"><?php echo smarty_lang(array('code' => 'logout'), $this);?>
+</a></li>
+        <?php endif; ?>
     </ul>
     <div class="clearfix"></div>
     

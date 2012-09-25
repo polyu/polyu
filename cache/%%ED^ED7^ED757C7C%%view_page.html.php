@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-10 16:25:03
+<?php /* Smarty version 2.6.18, created on 2012-09-25 10:18:35
          compiled from /home/wwwroot/styles/cbv2new/layout/view_page.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'page', '/home/wwwroot/styles/cbv2new/layout/view_page.html', 1, false),)), $this); ?>

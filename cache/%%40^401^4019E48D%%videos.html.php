@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 14:10:34
+<?php /* Smarty version 2.6.18, created on 2012-09-25 10:23:16
          compiled from /home/wwwroot/styles/cbv2new/layout/videos.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'link', '/home/wwwroot/styles/cbv2new/layout/videos.html', 14, false),array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/videos.html', 21, false),array('function', 'AD', '/home/wwwroot/styles/cbv2new/layout/videos.html', 36, false),)), $this); ?>
@@ -13,7 +13,7 @@ unset($_smarty_tpl_vars);
 	-->
 <!-- Listing Categories End -->
 
-<div style="width:620px; float:left" class="vid_page_conainer" >
+<div style="width:100%; float:left" class="vid_page_conainer" >
 
 
 <div class="time_cont">

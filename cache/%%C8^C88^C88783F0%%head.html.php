@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 15:41:16
+<?php /* Smarty version 2.6.18, created on 2012-09-25 10:07:50
          compiled from /home/wwwroot/styles/global/head.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'include_js', '/home/wwwroot/styles/global/head.html', 60, false),array('function', 'include_header', '/home/wwwroot/styles/global/head.html', 69, false),array('function', 'lang', '/home/wwwroot/styles/global/head.html', 86, false),array('function', 'getThumb', '/home/wwwroot/styles/global/head.html', 491, false),array('function', 'fb_embed_video', '/home/wwwroot/styles/global/head.html', 495, false),array('function', 'videoLink', '/home/wwwroot/styles/global/head.html', 500, false),array('function', 'get_photo', '/home/wwwroot/styles/global/head.html', 508, false),array('modifier', 'replace', '/home/wwwroot/styles/global/head.html', 90, false),array('modifier', 'description', '/home/wwwroot/styles/global/head.html', 490, false),array('modifier', 'strip_tags', '/home/wwwroot/styles/global/head.html', 490, false),)), $this); ?>

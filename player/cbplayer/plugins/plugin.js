@@ -5,7 +5,7 @@ var template = function(player, config, div){
       alert('Hello World!');
     }
     function setup(evt) {
-     
+     //player.getPlugin("dock").setButton('helloworld', sayhello, 'player/cbplayer/skins/live.png', 'player/cbplayer/skins/live.png');
     }
     player.onReady(setup);
     this.resize = function(width, height) {

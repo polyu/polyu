@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 14:10:38
+<?php /* Smarty version 2.6.18, created on 2012-09-25 10:26:24
          compiled from /home/wwwroot/styles/cbv2new/layout/blocks/manage/account_left.html */ ?>
 <div class="my_account_left">
 <ul>
@@ -16,6 +16,11 @@
 "><?php echo $this->_tpl_vars['link_name']; ?>
 </a></li>
         <?php endforeach; endif; unset($_from); ?>
+         <?php if ($this->_tpl_vars['name'] == 'Videos'): ?>
+         		<?php if (has_access ( 'admin_access' , true )): ?>
+         		<li><a href="manage_cameras.php">Manage Camera</a></li>
+         		<?php endif; ?>
+         <?php endif; ?>
         </ul>
     </li>
     <?php endforeach; endif; unset($_from); ?>

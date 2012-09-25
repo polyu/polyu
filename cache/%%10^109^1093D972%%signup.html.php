@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 16:00:24
+<?php /* Smarty version 2.6.18, created on 2012-09-25 10:24:27
          compiled from /home/wwwroot/styles/cbv2new/layout/signup.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/signup.html', 7, false),array('function', 'link', '/home/wwwroot/styles/cbv2new/layout/signup.html', 10, false),array('function', 'ANCHOR', '/home/wwwroot/styles/cbv2new/layout/signup.html', 18, false),array('function', 'load_captcha', '/home/wwwroot/styles/cbv2new/layout/signup.html', 91, false),array('modifier', 'sprintf', '/home/wwwroot/styles/cbv2new/layout/signup.html', 11, false),)), $this); ?>
@@ -19,7 +19,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/ho
 
 <?php endif; ?> </div>
 <?php else: ?>    
-<div class="signup_left">
+<div class="signup_left" style="margin-left:25%;">
 	<h2><?php echo smarty_lang(array('code' => 'user_mem_login'), $this);?>
 </h2>
 	<?php echo smarty_lang(array('code' => 'if_you_already_hv_account'), $this);?>

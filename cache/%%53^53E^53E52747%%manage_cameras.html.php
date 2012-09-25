@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 16:13:50
+<?php /* Smarty version 2.6.18, created on 2012-09-25 10:08:42
          compiled from /home/wwwroot/styles/cbv2new/layout/manage_cameras.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 7, false),array('modifier', 'truncate', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 59, false),array('modifier', 'date_format', '/home/wwwroot/styles/cbv2new/layout/manage_cameras.html', 63, false),)), $this); ?>

@@ -1,15 +1,18 @@
 <?php
-/*
- * Created on 2012-9-6
- *
- * To change the template for this generated file go to
- * Window - Preferences - PHPeclipse - PHP - Code Templates
- */
- $userquery->my_account_links();
- $Upload->load_video_fields();
- $formObj->createField();
- $cbvid->action->get_playlists();
- $cbvid->action->get_playlists();
-  $cbvid->action->get_thumb();
- $Cbucket->LatestAdminMenu();
-?>
+$mystring = 'http://www.sohu.com';
+$findme = 'http:';
+$pos = strpos($mystring, $findme);
+
+// 注意这里使用的是 ===。简单的 == 不能像我们期待的那样工作，
+// 因为 'a' 是第 0 位置上的（第一个）字符。
+if ($pos === false) {
+  echo "The string '$findme' was not found in the string '$mystring'";
+} else {
+  echo "The string '$findme' was found in the string '$mystring'";
+  echo " and exists at position $pos";
+}
+if($pos===0)
+{
+	echo "what!";
+}
+?>  

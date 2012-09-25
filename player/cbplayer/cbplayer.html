@@ -67,16 +67,16 @@ var playlist_detail={$playlist_detail};
 			{rdelim},
 			onPlay:function()
 			{ldelim}
-				var item=jwplayer("mediaplayer").getPlaylistItem();
-				
+					var item=jwplayer("mediaplayer").getPlaylistItem();
+					
 					if(item['remoteurl']==''||item['remoteurl']==undefined)
 						{ldelim}
-							
+							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld');
 						{rdelim}
 					else
 						{ldelim}
-						
-						
+							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld', OpenLiveVideo, 'player/cbplayer/skins/live.png', 'player/cbplayer/skins/live.png');
+							
 						{rdelim}
 				
 			{rdelim}
@@ -84,8 +84,8 @@ var playlist_detail={$playlist_detail};
 	{rdelim});
 </script>
 
-<div id="LiveVideo" style="display:none">
-<iframe id="LiveVideoBox" src="" style="width:800px;height:800px;"></iframe>
+<div id="LiveVideo" style="display:none" title="Live Video">
+<iframe id="LiveVideoBox" src="" style="width:100%;height:600px;border-width:0;"></iframe>
 </div>
 <script>
 
@@ -96,6 +96,7 @@ var playlist_detail={$playlist_detail};
 function OpenLiveVideo()
 {
 	jwplayer("mediaplayer").pause();
+	jwplayer("mediaplayer").setFullscreen(false);
 	var item=jwplayer("mediaplayer").getPlaylistItem();
 	$("#LiveVideoBox").attr("src","watch_camera.php?fullscreen=1&cam_id="+item['remoteurl']);
 	$( "#LiveVideo" ).dialog({

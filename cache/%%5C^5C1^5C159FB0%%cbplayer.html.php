@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-24 16:40:09
+<?php /* Smarty version 2.6.18, created on 2012-09-25 10:07:50
          compiled from /home/wwwroot/player/cbplayer/cbplayer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'getThumb', '/home/wwwroot/player/cbplayer/cbplayer.html', 10, false),)), $this); ?>
@@ -49,7 +49,19 @@ var playlist_detail=<?php echo $this->_tpl_vars['playlist_detail']; ?>
 		<!-- Setting Pseudo Streaming -->
 		<?php if ($this->_tpl_vars['Cbucket']->configs['pseudostreaming'] == 'yes'): ?>provider: 'http',<?php endif; ?>
 		
+		<!-- Setting Plugins -->
+		'plugins':
+		{
+			
+			'player/cbplayer/plugins/plugin.js': {
+            text: 'Hello world!'
+          }
 		
+			
+		}
+		,
+		
+		<!-- For Licensensed Players -->
   		<!-- Setting Logo -->
 		'logo':{
 			file :player_logo ,
@@ -73,16 +85,16 @@ var playlist_detail=<?php echo $this->_tpl_vars['playlist_detail']; ?>
 			},
 			onPlay:function()
 			{
-				var item=jwplayer("mediaplayer").getPlaylistItem();
-				
+					var item=jwplayer("mediaplayer").getPlaylistItem();
+					
 					if(item['remoteurl']==''||item['remoteurl']==undefined)
 						{
-							
-							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld', sayhello, '/player/cbplayer/skins/live.png', '/player/cbplayer/skins/live.png');
+							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld');
 						}
 					else
 						{
-							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld', sayhello, '/player/cbplayer/skins/live.png', '/player/cbplayer/skins/live.png');
+							jwplayer("mediaplayer").getPlugin("dock").setButton('helloworld', OpenLiveVideo, 'player/cbplayer/skins/live.png', 'player/cbplayer/skins/live.png');
+							
 						}
 				
 			}
@@ -90,8 +102,8 @@ var playlist_detail=<?php echo $this->_tpl_vars['playlist_detail']; ?>
 	});
 </script>
 
-<div id="LiveVideo" style="display:none">
-<iframe id="LiveVideoBox" src="" style="width:800px;height:800px;"></iframe>
+<div id="LiveVideo" style="display:none" title="Live Video">
+<iframe id="LiveVideoBox" src="" style="width:100%;height:600px;border-width:0;"></iframe>
 </div>
 <script>
 
@@ -102,10 +114,11 @@ var playlist_detail=<?php echo $this->_tpl_vars['playlist_detail']; ?>
 function OpenLiveVideo()
 {
 	jwplayer("mediaplayer").pause();
+	jwplayer("mediaplayer").setFullscreen(false);
 	var item=jwplayer("mediaplayer").getPlaylistItem();
 	$("#LiveVideoBox").attr("src","watch_camera.php?fullscreen=1&cam_id="+item[\'remoteurl\']);
 	$( "#LiveVideo" ).dialog({
-	height: 600,
+	height: 700,
 	width:900,
 	buttons: {
 				"OK": function() {
@@ -114,10 +127,6 @@ function OpenLiveVideo()
 		}
 	});
 }
-function helloworld()
-{
-}
 '; ?>
-
 
 </script>
