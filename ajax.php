@@ -109,6 +109,70 @@ if(!empty($mode))
 			
 		}
 		break;
+		case 'show_all_playlists_mobile':
+		{
+			if(!isSectionEnabled('videos') || !$userquery->perm_check('view_videos',false) )
+			exit();
+			
+			$allplaylists=$cbvid->action->get_allplaylists();
+			if($allplaylists)
+			{		
+					header('Content-type: text/xml');
+					echo "<playlists>";
+					foreach($allplaylists as $pl)
+					{
+						
+						
+							$plitems=$cbvid->action->get_playlist_items($pl['playlist_id']);
+							if($plitems)
+							{		
+								    
+									$itemscount=count($plitems);
+									
+									$video=get_videos(array('videoid'=>$plitems[0]['object_id']));
+									if($video)
+									{
+										assign('playlist_id',$pl['playlist_id']);
+										assign('playlist_count',$itemscount);
+										assign('playlist',$pl);
+										assign('video',$video[0]);
+										
+										Template('blocks/allplaylistsmobile.html');
+										
+									}	
+							}
+					}
+					echo "</playlists>";
+			}
+			
+		}
+		break;
+		case 'show_playlist_mobile':
+		{
+			if(!isSectionEnabled('videos') || !$userquery->perm_check('view_videos',false) )
+			exit();
+			$playlistid = $_POST['playlistid'];
+			if(empty($playlistid))
+			exit();
+			$plitems=$cbvid->action->get_playlist_items($playlistid);
+			if($plitems)
+			{
+				header('Content-type: text/xml');
+				echo "<videos>";						    
+				foreach($plitems as $pl)
+				{
+					
+					$video=get_videos(array('videoid'=>$pl['object_id']));
+					if($video)
+					{
+						assign('video',$video[0]);
+						Template('blocks/playlistmobile.html');
+					}						
+				}
+				echo "</videos>";
+			}
+		}
+		break;
 		//hack by jiaqi
 		case 'featured_videos':
 		{
