@@ -12,9 +12,9 @@
 	//Database Name
 	$DBNAME = 'video';
 	//Database Username
-	$DBUSER = 'root';
+	$DBUSER = 'admin';
 	//Database Password
-	$DBPASS = 'root';
+	$DBPASS = 'password';
 	//Setting Table Prefix
 	define('TABLE_PREFIX','cb_');
 

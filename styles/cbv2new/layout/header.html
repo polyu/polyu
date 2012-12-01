@@ -6,6 +6,7 @@
 <div id="header">
 	<div>
     <a href="{$baseurl}"><img src="{$imageurl}/dot.gif" alt="{cbtitle}" name="logo_icon" width="250" height="60" border="0" id="logo_icon" title="{cbtitle}"  class="logo"></a>
+<a href="{$baseurl}"><img src="{$imageurl}/dot.gif" alt="{cbtitle}" name="logo_icon" width="250" height="60" border="0" id="logo_icon" title="{cbtitle}"  class="logo2"></a>
 </div> <!--LOGO END-->
 {ANCHOR place='mature_content'}
     <div class="login_con clearfix" style="display:none;">
@@ -62,17 +63,17 @@
         	<li>{$guestmsg|sprintf:$loginlink:$loginlink}</li>
         {else}
         				
-        <li><a href="{link name='index '}">{lang code='menu_home'}</a></li>
-         <li><a href="{link name='videos'}">{lang code='videos'}</a></li>
+        <li><a href="{link name='index'}">{lang code='menu_home'} &nbsp</a></li>
+         <li><a href="{link name='videos'}">{lang code='videos'} &nbsp</a></li>
           
          {if $userquery->perm_check('allow_video_upload',true)}
         	          	
         	
-        	<li><a href="{link name='my_videos'}">{lang code='com_my_videos'}</a></li>
+        	<li><a href="{link name='my_videos'}">{lang code='com_my_videos'} &nbsp</a></li>
         	
-        	<li><a href="{link name='my_playlists'}">{lang code='playlists'}</a></li>
-			<li><a href="{link name='upload'}">{lang code='upload'}</a></li>
-			<li><a href="{link name='my_account'}">{lang code='com_my_account'}</a></li>
+        	<li><a href="{link name='my_playlists'}">{lang code='playlists'} &nbsp</a></li>
+			<li><a href="{link name='upload'}">{lang code='upload'} &nbsp</a></li>
+			<li><a href="{link name='my_account'}">{lang code='com_my_account'} &nbsp</a></li>
 						{/if}
 						{if has_access('admin_access',true)}
 							
