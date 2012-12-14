@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 12:24:11
+<?php /* Smarty version 2.6.18, created on 2012-12-01 16:01:53
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/myaccount.html */ ?>
 <div>
  <?php $_smarty_tpl_vars = $this->_tpl_vars;

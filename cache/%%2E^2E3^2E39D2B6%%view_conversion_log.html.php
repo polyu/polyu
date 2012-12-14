@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-11-30 16:41:45
+<?php /* Smarty version 2.6.18, created on 2012-12-03 13:26:43
          compiled from /mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/view_conversion_log.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'replace', '/mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/view_conversion_log.html', 33, false),array('modifier', 'nl2br', '/mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/view_conversion_log.html', 73, false),)), $this); ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 11:42:03
+<?php /* Smarty version 2.6.18, created on 2012-12-01 16:07:37
          compiled from /mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/members.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'get_form_val', '/mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/members.html', 8, false),array('modifier', 'get_user_level', '/mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/members.html', 115, false),)), $this); ?>

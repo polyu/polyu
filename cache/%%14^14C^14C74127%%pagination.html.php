@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 11:42:03
+<?php /* Smarty version 2.6.18, created on 2012-12-01 16:07:37
          compiled from /mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/blocks/pagination.html */ ?>
 <div class="pagination" align="center"> 
 <?php if ($this->_tpl_vars['pagination']): ?>

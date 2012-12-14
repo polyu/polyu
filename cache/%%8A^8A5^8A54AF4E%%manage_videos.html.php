@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 11:57:31
+<?php /* Smarty version 2.6.18, created on 2012-12-01 16:00:45
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/manage_videos.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/manage_videos.html', 7, false),array('modifier', 'form_val', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/manage_videos.html', 13, false),)), $this); ?>

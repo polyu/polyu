@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 12:23:41
+<?php /* Smarty version 2.6.18, created on 2012-12-03 11:11:47
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/share_form.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/share_form.html', 11, false),array('function', 'videoLink', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/share_form.html', 57, false),array('function', 'ANCHOR', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/share_form.html', 79, false),array('modifier', 'htmlspecialchars', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/share_form.html', 12, false),array('modifier', 'sprintf', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/share_form.html', 66, false),)), $this); ?>

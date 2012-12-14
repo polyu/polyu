@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 11:55:50
+<?php /* Smarty version 2.6.18, created on 2012-12-01 16:01:34
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/global/upload_form.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/mnt/array1/www/htdocs/wwwroot/styles/global/upload_form.html', 2, false),array('modifier', 'sprintf', '/mnt/array1/www/htdocs/wwwroot/styles/global/upload_form.html', 12, false),)), $this); ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 11:38:08
+<?php /* Smarty version 2.6.18, created on 2012-12-01 15:51:46
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/global_header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'date_format', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/global_header.html', 6, false),array('function', 'rss_feeds', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/global_header.html', 12, false),array('function', 'cbtitle', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/global_header.html', 19, false),array('function', 'include_header', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/global_header.html', 47, false),)), $this); ?>

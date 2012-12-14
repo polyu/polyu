@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 12:23:35
+<?php /* Smarty version 2.6.18, created on 2012-12-01 15:51:51
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/playlist.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'getThumb', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/playlist.html', 8, false),array('function', 'ANCHOR', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/playlist.html', 8, false),array('function', 'videoLink', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/playlist.html', 11, false),array('function', 'show_rating', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/playlist.html', 19, false),array('modifier', 'truncate', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/playlist.html', 16, false),array('modifier', 'niceTime', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/playlist.html', 25, false),)), $this); ?>

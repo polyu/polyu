@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 11:57:34
+<?php /* Smarty version 2.6.18, created on 2012-12-01 16:00:55
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/manage_playlists.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/manage_playlists.html', 7, false),array('function', 'videoLink', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/manage_playlists.html', 102, false),array('modifier', 'truncate', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/manage_playlists.html', 60, false),array('modifier', 'date_format', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/manage_playlists.html', 65, false),array('modifier', 'number_format', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/manage_playlists.html', 66, false),)), $this); ?>

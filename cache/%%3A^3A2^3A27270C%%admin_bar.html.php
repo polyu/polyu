@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 11:38:22
+<?php /* Smarty version 2.6.18, created on 2012-12-01 15:52:38
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/global/admin_bar.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/mnt/array1/www/htdocs/wwwroot/styles/global/admin_bar.html', 79, false),)), $this); ?>

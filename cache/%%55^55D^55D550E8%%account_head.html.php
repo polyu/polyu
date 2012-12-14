@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 11:57:32
+<?php /* Smarty version 2.6.18, created on 2012-12-01 16:00:46
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/manage/account_head.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/manage/account_head.html', 6, false),array('modifier', 'date_format', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/manage/account_head.html', 7, false),array('modifier', 'nicetime', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/manage/account_head.html', 8, false),array('modifier', 'number_format', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/manage/account_head.html', 9, false),)), $this); ?>

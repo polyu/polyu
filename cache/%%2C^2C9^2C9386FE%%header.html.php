@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-11-30 20:38:57
+<?php /* Smarty version 2.6.18, created on 2012-12-01 16:07:15
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/header.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'cbtitle', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/header.html', 8, false),array('function', 'ANCHOR', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/header.html', 11, false),array('function', 'link', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/header.html', 16, false),array('function', 'lang', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/header.html', 20, false),array('function', 'cbMenu', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/header.html', 53, false),array('modifier', 'sprintf', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/header.html', 29, false),array('modifier', 'get_form_val', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/header.html', 88, false),array('modifier', 'capitalize', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/header.html', 92, false),)), $this); ?>
@@ -111,13 +111,9 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'cbtitle', '
          <?php if ($this->_tpl_vars['userquery']->perm_check('allow_video_upload',true)): ?>
         	          	
         	
-        	<li><a href="<?php echo cblink(array('name' => 'my_videos'), $this);?>
-"><?php echo smarty_lang(array('code' => 'com_my_videos'), $this);?>
- &nbsp</a></li>
         	
-        	<li><a href="<?php echo cblink(array('name' => 'my_playlists'), $this);?>
-"><?php echo smarty_lang(array('code' => 'playlists'), $this);?>
- &nbsp</a></li>
+        	
+        	
 			<li><a href="<?php echo cblink(array('name' => 'upload'), $this);?>
 "><?php echo smarty_lang(array('code' => 'upload'), $this);?>
  &nbsp</a></li>

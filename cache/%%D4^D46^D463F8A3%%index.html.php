@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 11:38:27
+<?php /* Smarty version 2.6.18, created on 2012-12-01 16:05:33
          compiled from /mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'get_videos', '/mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/index.html', 15, false),array('function', 'get_groups', '/mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/index.html', 20, false),array('function', 'get_users', '/mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/index.html', 25, false),array('function', 'get_photos', '/mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/index.html', 32, false),array('function', 'get_collections', '/mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/index.html', 39, false),array('modifier', 'nl2br', '/mnt/array1/www/htdocs/wwwroot/admin_area/styles/cbv2/layout/index.html', 140, false),)), $this); ?>

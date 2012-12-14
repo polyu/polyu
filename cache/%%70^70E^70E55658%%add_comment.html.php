@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 12:23:42
+<?php /* Smarty version 2.6.18, created on 2012-12-03 11:11:48
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/comments/add_comment.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'lang', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/comments/add_comment.html', 2, false),array('function', 'ANCHOR', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/comments/add_comment.html', 22, false),array('function', 'load_captcha', '/mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/blocks/comments/add_comment.html', 37, false),)), $this); ?>

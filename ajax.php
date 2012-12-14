@@ -113,11 +113,11 @@ if(!empty($mode))
 		{
 			if(!isSectionEnabled('videos') || !$userquery->perm_check('view_videos',false) )
 			exit();
-			
+			header('Content-type: text/xml');
 			$allplaylists=$cbvid->action->get_allplaylists();
 			if($allplaylists)
 			{		
-					header('Content-type: text/xml');
+					
 					echo "<playlists>";
 					foreach($allplaylists as $pl)
 					{
@@ -137,7 +137,7 @@ if(!empty($mode))
 										assign('playlist',$pl);
 										assign('video',$video[0]);
 										
-										Template('blocks/allplaylistsmobile.html');
+										Template('blocks/mobile/allplaylistsmobile.html');
 										
 									}	
 							}
@@ -154,22 +154,54 @@ if(!empty($mode))
 			$playlistid = $_POST['playlistid'];
 			if(empty($playlistid))
 			exit();
-			$plitems=$cbvid->action->get_playlist_items($playlistid);
-			if($plitems)
+			header('Content-type: text/xml');
+			if($playlistid==-1)
 			{
-				header('Content-type: text/xml');
-				echo "<videos>";						    
-				foreach($plitems as $pl)
+				$allplaylists=$cbvid->action->get_allplaylists();
+				if($allplaylists)
+				{
+					echo "<videos>";
+					foreach($allplaylists as $pl)
+					{
+						$plitems=$cbvid->action->get_playlist_items($pl['playlist_id']);
+						if($plitems)
+						{
+							foreach($plitems as $single)
+							{
+								$video=get_videos(array('videoid'=>$single['object_id']));
+								if($video)
+									{
+										
+										assign('video',$video[0]);
+										Template('blocks/mobile/playlistmobile.html');
+										
+									}	
+							}
+						}
+					}
+					echo "</videos>";
+				}
+				
+			}
+			else
+			{
+				$plitems=$cbvid->action->get_playlist_items($playlistid);
+				if($plitems)
 				{
 					
-					$video=get_videos(array('videoid'=>$pl['object_id']));
-					if($video)
+					echo "<videos>";						    
+					foreach($plitems as $pl)
 					{
-						assign('video',$video[0]);
-						Template('blocks/playlistmobile.html');
-					}						
+					
+						$video=get_videos(array('videoid'=>$pl['object_id']));
+						if($video)
+						{
+							assign('video',$video[0]);
+							Template('blocks/mobile/playlistmobile.html');
+						}						
+					}
+					echo "</videos>";
 				}
-				echo "</videos>";
 			}
 		}
 		break;

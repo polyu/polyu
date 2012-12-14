@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-09-29 11:38:09
+<?php /* Smarty version 2.6.18, created on 2012-12-01 15:51:49
          compiled from /mnt/array1/www/htdocs/wwwroot/styles/cbv2new/layout/message.html */ ?>
 <?php $this->assign('msg', $this->_tpl_vars['eh']->message_list); ?>
 <?php $this->assign('err', $this->_tpl_vars['eh']->error_list); ?>
