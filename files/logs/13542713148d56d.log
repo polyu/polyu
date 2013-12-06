@@ -1,185 +1,0 @@
-Started on 2012-11-30 18:28:44 - 2012 Nov 30
-
-Checking File ....
-File : /mnt/array1/www/htdocs/wwwroot/files/conversion_queue/13542713148d56d.flv
-File Exists : Yes
-raw_output_for_stat : ffmpeg version N-44546-g66bdc58 Copyright (c) 2000-2012 the FFmpeg developers
-  built on Sep 20 2012 14:29:12 with gcc 4.3.2 (Sourcery G++ Lite 2008q3-72)
-  configuration: --prefix=/home/administrator/nas/usr/local --arch=arm --target-os=linux --enable-gpl --enable-libx264 --enable-libxvid --enable-cross-compile --cross-prefix=/usr/local/arm/4.3.2/bin/arm-linux- --extra-cflags=-I/home/administrator/nas/usr/local/include --extra-ldflags=-L/home/administrator/nas/usr/local/lib --extra-cflags=-static --extra-ldflags=-static --enable-libfaac --enable-nonfree
-  libavutil      51. 73.101 / 51. 73.101
-  libavcodec     54. 56.100 / 54. 56.100
-  libavformat    54. 27.101 / 54. 27.101
-  libavdevice    54.  2.100 / 54.  2.100
-  libavfilter     3. 16.104 /  3. 16.104
-  libswscale      2.  1.101 /  2.  1.101
-  libswresample   0. 15.100 /  0. 15.100
-  libpostproc    52.  0.100 / 52.  0.100
-Input #0, flv, from '/mnt/array1/www/htdocs/wwwroot/files/conversion_queue/13542713148d56d.flv':
-  Metadata:
-    starttime       : 0
-    totalduration   : 183
-    totaldatarate   : 763
-    bytelength      : 17508690
-    canseekontime   : true
-    sourcedata      : BCA28DD07HH1348547597491994
-    purl            : 
-    pmsg            : 
-  Duration: 00:03:03.11, start: 0.000000, bitrate: 764 kb/s
-    Stream #0:0: Video: h264 (Main), yuv420p, 640x480 [SAR 1:1 DAR 4:3], 695 kb/s, 29.97 tbr, 1k tbn, 59.94 tbc
-    Stream #0:1: Audio: aac, 44100 Hz, mono, s16, 78 kb/s
-Output #0, null, to '/dev/null':
-  Metadata:
-    starttime       : 0
-    totalduration   : 183
-    totaldatarate   : 763
-    bytelength      : 17508690
-    canseekontime   : true
-    sourcedata      : BCA28DD07HH1348547597491994
-    purl            : 
-    pmsg            : 
-    encoder         : Lavf54.27.101
-    Stream #0:0: Video: h264, yuv420p, 640x480 [SAR 1:1 DAR 4:3], q=2-31, 695 kb/s, 90k tbn, 29.97 tbc
-    Stream #0:1: Audio: aac, 44100 Hz, mono, 78 kb/s
-Stream mapping:
-  Stream #0:0 -> #0:0 (copy)
-  Stream #0:1 -> #0:1 (copy)
-Press [q] to stop, [?] for help
-frame=  742 fps=0.0 q=-1.0 size=       0kB time=00:00:24.75 bitrate=   0.0kbits/s    frame= 1417 fps=1403 q=-1.0 size=       0kB time=00:00:47.28 bitrate=   0.0kbits/s    frame= 2268 fps=1489 q=-1.0 size=       0kB time=00:01:15.67 bitrate=   0.0kbits/s    frame= 2991 fps=1476 q=-1.0 size=       0kB time=00:01:39.82 bitrate=   0.0kbits/s    frame= 3753 fps=1486 q=-1.0 size=       0kB time=00:02:05.24 bitrate=   0.0kbits/s    frame= 4341 fps=1433 q=-1.0 size=       0kB time=00:02:24.84 bitrate=   0.0kbits/s    frame= 5006 fps=1410 q=-1.0 size=       0kB time=00:02:47.04 bitrate=   0.0kbits/s    frame= 5489 fps=1389 q=-1.0 Lsize=       0kB time=00:03:03.67 bitrate=   0.0kbits/s    
-video:15160kB audio:1699kB subtitle:0 global headers:0kB muxing overhead -100.000000%
-
-
-Preparing file...
-format : flv
-duration : 183.11
-size : 17508690
-bitrate : 747
-video_width : 640
-video_height : 480
-video_wh_ratio : 1.33333333333
-video_codec : h264
-video_rate : 29.9765168478
-video_bitrate : 662
-video_color : N/A
-audio_codec : aac
-audio_bitrate : 74
-audio_rate : 44100
-audio_channels : mono
-path : /mnt/array1/www/htdocs/wwwroot/files/conversion_queue/13542713148d56d.flv
-
-Converting Video
-Conversion Command : /usr/local/bin/ffmpeg -i /mnt/array1/www/htdocs/wwwroot/files/conversion_queue/13542713148d56d.flv  -f flv  -vcodec libx264 -r 25  -ab 128000  -ar 22050  /mnt/array1/www/htdocs/wwwroot/files/videos/13542713148d56d.flv  2> /mnt/array1/www/htdocs/wwwroot/files/temp/13542713346644d.tmp
-
-
-Conversion Details
-
-Flv Quick Conv;raw_output_for_stat : ffmpeg version N-44546-g66bdc58 Copyright (c) 2000-2012 the FFmpeg developers
-  built on Sep 20 2012 14:29:12 with gcc 4.3.2 (Sourcery G++ Lite 2008q3-72)
-  configuration: --prefix=/home/administrator/nas/usr/local --arch=arm --target-os=linux --enable-gpl --enable-libx264 --enable-libxvid --enable-cross-compile --cross-prefix=/usr/local/arm/4.3.2/bin/arm-linux- --extra-cflags=-I/home/administrator/nas/usr/local/include --extra-ldflags=-L/home/administrator/nas/usr/local/lib --extra-cflags=-static --extra-ldflags=-static --enable-libfaac --enable-nonfree
-  libavutil      51. 73.101 / 51. 73.101
-  libavcodec     54. 56.100 / 54. 56.100
-  libavformat    54. 27.101 / 54. 27.101
-  libavdevice    54.  2.100 / 54.  2.100
-  libavfilter     3. 16.104 /  3. 16.104
-  libswscale      2.  1.101 /  2.  1.101
-  libswresample   0. 15.100 /  0. 15.100
-  libpostproc    52.  0.100 / 52.  0.100
-Input #0, flv, from '/mnt/array1/www/htdocs/wwwroot/files/videos/13542713148d56d.flv':
-  Metadata:
-    starttime       : 0
-    totalduration   : 183
-    totaldatarate   : 763
-    bytelength      : 17508690
-    canseekontime   : true
-    sourcedata      : BCA28DD07HH1348547597491994
-    purl            : 
-    pmsg            : 
-  Duration: 00:03:03.11, start: 0.000000, bitrate: 764 kb/s
-    Stream #0:0: Video: h264 (Main), yuv420p, 640x480 [SAR 1:1 DAR 4:3], 695 kb/s, 29.97 tbr, 1k tbn, 59.94 tbc
-    Stream #0:1: Audio: aac, 44100 Hz, mono, s16, 78 kb/s
-Output #0, null, to '/dev/null':
-  Metadata:
-    starttime       : 0
-    totalduration   : 183
-    totaldatarate   : 763
-    bytelength      : 17508690
-    canseekontime   : true
-    sourcedata      : BCA28DD07HH1348547597491994
-    purl            : 
-    pmsg            : 
-    encoder         : Lavf54.27.101
-    Stream #0:0: Video: h264, yuv420p, 640x480 [SAR 1:1 DAR 4:3], q=2-31, 695 kb/s, 90k tbn, 29.97 tbc
-    Stream #0:1: Audio: aac, 44100 Hz, mono, 78 kb/s
-Stream mapping:
-  Stream #0:0 -> #0:0 (copy)
-  Stream #0:1 -> #0:1 (copy)
-Press [q] to stop, [?] for help
-frame=  326 fps=0.0 q=-1.0 size=       0kB time=00:00:10.87 bitrate=   0.0kbits/s    frame=  620 fps=617 q=-1.0 size=       0kB time=00:00:20.68 bitrate=   0.0kbits/s    frame=  943 fps=627 q=-1.0 size=       0kB time=00:00:31.48 bitrate=   0.0kbits/s    frame= 1381 fps=672 q=-1.0 size=       0kB time=00:00:46.09 bitrate=   0.0kbits/s    frame= 1944 fps=759 q=-1.0 size=       0kB time=00:01:04.86 bitrate=   0.0kbits/s    frame= 2468 fps=804 q=-1.0 size=       0kB time=00:01:22.36 bitrate=   0.0kbits/s    frame= 3019 fps=836 q=-1.0 size=       0kB time=00:01:40.75 bitrate=   0.0kbits/s    frame= 3687 fps=895 q=-1.0 size=       0kB time=00:02:03.04 bitrate=   0.0kbits/s    frame= 4550 fps=983 q=-1.0 size=       0kB time=00:02:31.81 bitrate=   0.0kbits/s    frame= 5268 fps=1021 q=-1.0 size=       0kB time=00:02:55.77 bitrate=   0.0kbits/s    frame= 5489 fps=1040 q=-1.0 Lsize=       0kB time=00:03:03.67 bitrate=   0.0kbits/s    
-video:15160kB audio:1699kB subtitle:0 global headers:0kB muxing overhead -100.000000%
-
-raw_output_for_stat : ffmpeg version N-44546-g66bdc58 Copyright (c) 2000-2012 the FFmpeg developers
-  built on Sep 20 2012 14:29:12 with gcc 4.3.2 (Sourcery G++ Lite 2008q3-72)
-  configuration: --prefix=/home/administrator/nas/usr/local --arch=arm --target-os=linux --enable-gpl --enable-libx264 --enable-libxvid --enable-cross-compile --cross-prefix=/usr/local/arm/4.3.2/bin/arm-linux- --extra-cflags=-I/home/administrator/nas/usr/local/include --extra-ldflags=-L/home/administrator/nas/usr/local/lib --extra-cflags=-static --extra-ldflags=-static --enable-libfaac --enable-nonfree
-  libavutil      51. 73.101 / 51. 73.101
-  libavcodec     54. 56.100 / 54. 56.100
-  libavformat    54. 27.101 / 54. 27.101
-  libavdevice    54.  2.100 / 54.  2.100
-  libavfilter     3. 16.104 /  3. 16.104
-  libswscale      2.  1.101 /  2.  1.101
-  libswresample   0. 15.100 /  0. 15.100
-  libpostproc    52.  0.100 / 52.  0.100
-Input #0, flv, from '/mnt/array1/www/htdocs/wwwroot/files/videos/13542713148d56d.flv':
-  Metadata:
-    starttime       : 0
-    totalduration   : 183
-    totaldatarate   : 763
-    bytelength      : 17508690
-    canseekontime   : true
-    sourcedata      : BCA28DD07HH1348547597491994
-    purl            : 
-    pmsg            : 
-  Duration: 00:03:03.11, start: 0.000000, bitrate: 764 kb/s
-    Stream #0:0: Video: h264 (Main), yuv420p, 640x480 [SAR 1:1 DAR 4:3], 695 kb/s, 29.97 tbr, 1k tbn, 59.94 tbc
-    Stream #0:1: Audio: aac, 44100 Hz, mono, s16, 78 kb/s
-Output #0, null, to '/dev/null':
-  Metadata:
-    starttime       : 0
-    totalduration   : 183
-    totaldatarate   : 763
-    bytelength      : 17508690
-    canseekontime   : true
-    sourcedata      : BCA28DD07HH1348547597491994
-    purl            : 
-    pmsg            : 
-    encoder         : Lavf54.27.101
-    Stream #0:0: Video: h264, yuv420p, 640x480 [SAR 1:1 DAR 4:3], q=2-31, 695 kb/s, 90k tbn, 29.97 tbc
-    Stream #0:1: Audio: aac, 44100 Hz, mono, 78 kb/s
-Stream mapping:
-  Stream #0:0 -> #0:0 (copy)
-  Stream #0:1 -> #0:1 (copy)
-Press [q] to stop, [?] for help
-frame=  736 fps=0.0 q=-1.0 size=       0kB time=00:00:24.56 bitrate=   0.0kbits/s    frame= 1381 fps=1354 q=-1.0 size=       0kB time=00:00:46.09 bitrate=   0.0kbits/s    frame= 1970 fps=1267 q=-1.0 size=       0kB time=00:01:05.73 bitrate=   0.0kbits/s    frame= 2829 fps=1377 q=-1.0 size=       0kB time=00:01:34.41 bitrate=   0.0kbits/s    frame= 3798 fps=1484 q=-1.0 size=       0kB time=00:02:06.73 bitrate=   0.0kbits/s    frame= 4785 fps=1559 q=-1.0 size=       0kB time=00:02:39.68 bitrate=   0.0kbits/s    frame= 5489 fps=1558 q=-1.0 Lsize=       0kB time=00:03:03.67 bitrate=   0.0kbits/s    
-video:15160kB audio:1699kB subtitle:0 global headers:0kB muxing overhead -100.000000%
-
-
-
-output_format : flv
-output_duration : 183.11
-output_size : 17508690
-output_bitrate : 747
-output_video_width : 640
-output_video_height : 480
-output_video_wh_ratio : 1.33333333333
-output_video_codec : h264
-output_video_rate : 29.9765168478
-output_video_bitrate : 662
-output_video_color : N/A
-output_audio_codec : aac
-output_audio_bitrate : 74
-output_audio_rate : 44100
-output_audio_channels : mono
-output_path : /mnt/array1/www/htdocs/wwwroot/files/videos/13542713148d56d.flv
-
-
-Time Took : 23.4418 seconds
-
-conversion_status : completed
